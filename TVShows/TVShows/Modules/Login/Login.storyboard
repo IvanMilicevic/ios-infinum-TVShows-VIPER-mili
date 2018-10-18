@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zIc-eW-6fX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8NU-uz-Vaa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZT-04-tLt">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50S-k4-HaY">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="522"/>
@@ -26,6 +26,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVP-Lr-GBS">
                                                 <rect key="frame" x="20" y="324" width="24" height="24"/>
                                                 <state key="normal" image="ic-checkbox-empty"/>
+                                                <connections>
+                                                    <action selector="_rememberMeButtonActionHandler:" destination="zIc-eW-6fX" eventType="touchUpInside" id="QX0-Gf-kkd"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfT-G1-Djz">
                                                 <rect key="frame" x="179.5" y="446" width="16" height="21"/>
@@ -66,6 +69,9 @@
                                                 <state key="normal" title="LOG IN">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="_loginButtonActionHandler:" destination="zIc-eW-6fX" eventType="touchUpInside" id="jVH-XC-mmM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVr-KQ-Nkh">
                                                 <rect key="frame" x="124.5" y="472" width="126" height="30"/>
@@ -75,6 +81,9 @@
                                                 <state key="normal" title="Create an account">
                                                     <color key="titleColor" red="1" green="0.45882352939999999" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="_createAnAccountActionHandler:" destination="zIc-eW-6fX" eventType="touchUpInside" id="Pyq-h3-Tbb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -121,6 +130,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cu2-XE-Dc1"/>
                     </view>
+                    <navigationItem key="navigationItem" id="b3q-s4-mgr"/>
                     <connections>
                         <outlet property="createAnAccountButton" destination="nVr-KQ-Nkh" id="ufa-vf-zku"/>
                         <outlet property="emailTextField" destination="DbR-Tx-S2Z" id="oUi-AD-BWj"/>
@@ -131,7 +141,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rle-ol-2Ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="306" y="303"/>
+            <point key="canvasLocation" x="1244" y="302.6986506746627"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7B7-8p-Ppu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8NU-uz-Vaa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UXg-38-Tru">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zIc-eW-6fX" kind="relationship" relationship="rootViewController" id="I1S-M4-TMl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5s-Ai-2RE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.80000000000001" y="302.6986506746627"/>
         </scene>
     </scenes>
     <resources>

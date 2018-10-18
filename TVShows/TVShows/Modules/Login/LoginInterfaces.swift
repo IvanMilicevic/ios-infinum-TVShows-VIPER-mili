@@ -11,6 +11,7 @@
 import UIKit
 
 enum LoginNavigationOption {
+    case home
 }
 
 protocol LoginWireframeInterface: WireframeInterface {
@@ -21,6 +22,9 @@ protocol LoginViewInterface: ViewInterface {
 }
 
 protocol LoginPresenterInterface: PresenterInterface {
+    func didSelectLoginAction(with _email: String?, password: String?)
+    func didSelectCreateAnAccountAction(with _email: String?, password: String?)
+    func didPressRememberMe()
 }
 
 protocol LoginInteractorInterface: InteractorInterface {

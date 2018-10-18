@@ -30,7 +30,30 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-	
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
+
+    // MARK: Actions
+
+    @IBAction func _loginButtonActionHandler(_ sender: Any) {
+        presenter.didSelectLoginAction(with: emailTextField.text, password: passwordTextField.text)
+    }
+
+    @IBAction func _createAnAccountActionHandler(_ sender: Any) {
+        presenter.didSelectCreateAnAccountAction(with: emailTextField.text, password: passwordTextField.text)
+    }
+    @IBAction func _rememberMeButtonActionHandler(_ sender: Any) {
+
+    }
+    
+    
+
 }
 
 // MARK: - Extensions -

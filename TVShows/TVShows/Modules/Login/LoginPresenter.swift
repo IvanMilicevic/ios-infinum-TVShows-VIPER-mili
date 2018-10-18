@@ -30,4 +30,16 @@ final class LoginPresenter {
 // MARK: - Extensions -
 
 extension LoginPresenter: LoginPresenterInterface {
+
+    func didSelectLoginAction(with _email: String?, password: String?) {
+
+    }
+
+    func didSelectCreateAnAccountAction(with _email: String?, password: String?) {
+
+    }
+
+    func didPressRememberMe() {
+
+    }
 }
