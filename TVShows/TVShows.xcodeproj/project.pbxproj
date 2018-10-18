@@ -133,8 +133,8 @@
 		8C52B2C6217748DD0048C730 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				8C52B2F1217875070048C730 /* Home */,
 				8C52B2F02178748C0048C730 /* Login */,
+				8C52B2F1217875070048C730 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -228,6 +228,7 @@
 				8C24E8BB2177424E005D3FB5 /* Sources */,
 				8C24E8BC2177424E005D3FB5 /* Frameworks */,
 				8C24E8BD2177424E005D3FB5 /* Resources */,
+				18BC38D9701F52E05E2FAEDE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,6 +286,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		18BC38D9701F52E05E2FAEDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TVShows/Pods-TVShows-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVShows/Pods-TVShows-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		998504E2708A62F70A7DE620 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

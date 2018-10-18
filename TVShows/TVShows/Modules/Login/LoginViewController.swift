@@ -10,11 +10,20 @@
 
 import UIKit
 
+
 final class LoginViewController: UIViewController {
 
     // MARK: - Public properties -
 
     var presenter: LoginPresenterInterface!
+
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+
+    @IBOutlet private weak var rememberMeButton: UIButton!
+    @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var createAnAccountButton: UIButton!
+
 
     // MARK: - Lifecycle -
 
