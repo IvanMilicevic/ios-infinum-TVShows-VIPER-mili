@@ -23,6 +23,12 @@
 		8C52B2FB2178759F0048C730 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B2F52178759F0048C730 /* LoginViewController.swift */; };
 		8C52B2FC2178759F0048C730 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B2F62178759F0048C730 /* LoginInteractor.swift */; };
 		8C52B2FD2178759F0048C730 /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B2F72178759F0048C730 /* LoginWireframe.swift */; };
+		8C52B30E2178B9DB0048C730 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C52B3082178B9DB0048C730 /* Home.storyboard */; };
+		8C52B30F2178B9DB0048C730 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B3092178B9DB0048C730 /* HomeInterfaces.swift */; };
+		8C52B3102178B9DB0048C730 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B30A2178B9DB0048C730 /* HomePresenter.swift */; };
+		8C52B3112178B9DB0048C730 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B30B2178B9DB0048C730 /* HomeViewController.swift */; };
+		8C52B3122178B9DB0048C730 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B30C2178B9DB0048C730 /* HomeInteractor.swift */; };
+		8C52B3132178B9DB0048C730 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B30D2178B9DB0048C730 /* HomeWireframe.swift */; };
 		CE3808578D6357A009BB0079 /* Pods_TVShows.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E9441FE0D2F82E902A5806 /* Pods_TVShows.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +51,12 @@
 		8C52B2F52178759F0048C730 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8C52B2F62178759F0048C730 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		8C52B2F72178759F0048C730 /* LoginWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireframe.swift; sourceTree = "<group>"; };
+		8C52B3082178B9DB0048C730 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		8C52B3092178B9DB0048C730 /* HomeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
+		8C52B30A2178B9DB0048C730 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		8C52B30B2178B9DB0048C730 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8C52B30C2178B9DB0048C730 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		8C52B30D2178B9DB0048C730 /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 		9DD26A5AAE59D685F38A7DA3 /* Pods-TVShows.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShows.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVShows/Pods-TVShows.release.xcconfig"; sourceTree = "<group>"; };
 		A0E9441FE0D2F82E902A5806 /* Pods_TVShows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4773ED7C57C4EC0E62F8434 /* Pods-TVShows.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShows.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVShows/Pods-TVShows.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,10 +206,10 @@
 			children = (
 				8C52B2F22178759F0048C730 /* Login.storyboard */,
 				8C52B2F32178759F0048C730 /* LoginInterfaces.swift */,
-				8C52B2F42178759F0048C730 /* LoginPresenter.swift */,
-				8C52B2F52178759F0048C730 /* LoginViewController.swift */,
 				8C52B2F62178759F0048C730 /* LoginInteractor.swift */,
 				8C52B2F72178759F0048C730 /* LoginWireframe.swift */,
+				8C52B2F42178759F0048C730 /* LoginPresenter.swift */,
+				8C52B2F52178759F0048C730 /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -205,6 +217,12 @@
 		8C52B2F1217875070048C730 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8C52B3082178B9DB0048C730 /* Home.storyboard */,
+				8C52B3092178B9DB0048C730 /* HomeInterfaces.swift */,
+				8C52B30A2178B9DB0048C730 /* HomePresenter.swift */,
+				8C52B30B2178B9DB0048C730 /* HomeViewController.swift */,
+				8C52B30C2178B9DB0048C730 /* HomeInteractor.swift */,
+				8C52B30D2178B9DB0048C730 /* HomeWireframe.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -280,6 +298,7 @@
 				8C24E8CD21774250005D3FB5 /* LaunchScreen.storyboard in Resources */,
 				8C24E8CA21774250005D3FB5 /* Assets.xcassets in Resources */,
 				8C52B2F82178759F0048C730 /* Login.storyboard in Resources */,
+				8C52B30E2178B9DB0048C730 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,16 +369,21 @@
 				8C24E8C32177424E005D3FB5 /* AppDelegate.swift in Sources */,
 				8C52B2EF217750410048C730 /* ViewInterface.swift in Sources */,
 				8C52B2EB217750410048C730 /* InteractorInterface.swift in Sources */,
+				8C52B3102178B9DB0048C730 /* HomePresenter.swift in Sources */,
 				8C52B2CA217749C90048C730 /* Constants.swift in Sources */,
+				8C52B3132178B9DB0048C730 /* HomeWireframe.swift in Sources */,
 				8C52B2FA2178759F0048C730 /* LoginPresenter.swift in Sources */,
 				8C52B2EE217750410048C730 /* PresenterInterface.swift in Sources */,
+				8C52B30F2178B9DB0048C730 /* HomeInterfaces.swift in Sources */,
 				8C52B2F92178759F0048C730 /* LoginInterfaces.swift in Sources */,
 				8C52B2CC217749FF0048C730 /* Initializable.swift in Sources */,
 				8C52B2FC2178759F0048C730 /* LoginInteractor.swift in Sources */,
+				8C52B3112178B9DB0048C730 /* HomeViewController.swift in Sources */,
 				8C52B2ED217750410048C730 /* UIStoryboardExtension.swift in Sources */,
 				8C52B2EC217750410048C730 /* BaseWireframe.swift in Sources */,
 				8C52B2FB2178759F0048C730 /* LoginViewController.swift in Sources */,
 				8C52B2FD2178759F0048C730 /* LoginWireframe.swift in Sources */,
+				8C52B3122178B9DB0048C730 /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,11 +31,20 @@ final class LoginPresenter {
 
 extension LoginPresenter: LoginPresenterInterface {
 
-    func didSelectLoginAction(with _email: String?, password: String?) {
+    func didSelectLoginAction(with email: String?, password: String?) {
+        guard let _email = email, let _password = password else {
+            return
+        }
+        _view.showProgressHUD()
+
 
     }
 
-    func didSelectCreateAnAccountAction(with _email: String?, password: String?) {
+    func didSelectCreateAnAccountAction(with email: String?, password: String?) {
+        guard let _email = email, let _password = password else {
+            return
+        }
+        print(_email + _password)
 
     }
 

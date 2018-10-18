@@ -33,6 +33,7 @@ final class LoginViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -49,7 +50,8 @@ final class LoginViewController: UIViewController {
         presenter.didSelectCreateAnAccountAction(with: emailTextField.text, password: passwordTextField.text)
     }
     @IBAction func _rememberMeButtonActionHandler(_ sender: Any) {
-
+        presenter.didSelectCreateAnAccountAction(with: emailTextField.text, password: passwordTextField.text)
+        // ovdje da promjenim ikonicu??
     }
     
     

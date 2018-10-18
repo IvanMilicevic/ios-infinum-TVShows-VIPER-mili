@@ -22,8 +22,8 @@ protocol LoginViewInterface: ViewInterface {
 }
 
 protocol LoginPresenterInterface: PresenterInterface {
-    func didSelectLoginAction(with _email: String?, password: String?)
-    func didSelectCreateAnAccountAction(with _email: String?, password: String?)
+    func didSelectLoginAction(with email: String?, password: String?)
+    func didSelectCreateAnAccountAction(with email: String?, password: String?)
     func didPressRememberMe()
 }
 
