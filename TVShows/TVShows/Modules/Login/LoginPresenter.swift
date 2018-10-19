@@ -41,10 +41,10 @@ extension LoginPresenter: LoginPresenterInterface {
             switch result {
             case .success(let loginData):
                     self._view.hideProgressHUD()
+                    NetworkManager.loginData = loginData
                     self._wireframe.navigate(to: .home)
-            case .failure(let error):
-                    self._view.hideProgressHUD()
-                    //TODO
+            case .failure:
+                    self._view.showErrorOnProgressHUD()
             }
         }
 
@@ -59,10 +59,10 @@ extension LoginPresenter: LoginPresenterInterface {
 
             switch result {
             case .success(let user):
-                self._view.successProgressHUD()
-            case .failure(let error):
-                self._view.hideProgressHUD()
-                //TODO
+                self._view.showSuccessOnProgressHUD()
+                self.didSelectLoginAction(with: email, password: password)
+            case .failure:
+                self._view.showErrorOnProgressHUD()
             }
         }
 

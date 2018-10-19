@@ -16,7 +16,13 @@ extension ViewInterface {
         SVProgressHUD.dismiss()
     }
 
-    func successProgressHUD() {
+    func showSuccessOnProgressHUD() {
         SVProgressHUD.showSuccess(withStatus: "Success")
     }
+
+    func showErrorOnProgressHUD() {
+        SVProgressHUD.showError(withStatus: "Error")
+    }
+
+
 }
