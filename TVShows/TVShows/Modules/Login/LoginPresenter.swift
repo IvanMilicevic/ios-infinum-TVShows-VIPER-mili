@@ -32,10 +32,23 @@ final class LoginPresenter {
 extension LoginPresenter: LoginPresenterInterface {
 
     func didSelectLoginAction(with email: String?, password: String?) {
-        guard let _email = email, let _password = password else {
+        guard let email = email, let password = password else {
             return
         }
         _view.showProgressHUD()
+        _interactor.loginUser(with: email, password: password) { result in
+
+
+
+            switch result {
+            case .success(let loginData):
+                    self._view.hideProgressHUD()
+                    self._wireframe.navigate(to: .home)
+            case .failure(let error):
+                    self._view.hideProgressHUD()
+                    //TODO
+            }
+        }
 
 
     }

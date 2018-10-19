@@ -9,6 +9,8 @@
 //
 
 import Foundation
+import Alamofire
+import CodableAlamofire
 
 final class LoginInteractor {
 }
@@ -16,4 +18,41 @@ final class LoginInteractor {
 // MARK: - Extensions -
 
 extension LoginInteractor: LoginInteractorInterface {
+    func registerUser(with email: String, password: String, completion: @escaping (Result<LoginData>) -> ()) {
+        let parameters: [String: String] = [
+            "email": email,
+            "password": password
+        ]
+
+        Alamofire
+            .request("https://api.infinum.academy/api/users/sessions",
+                     method: .post,
+                     parameters: parameters,
+                     encoding: JSONEncoding.default)
+            .validate()
+            .responseDecodableObject(keyPath: "data", decoder: JSONDecoder()) { (response: DataResponse<LoginData>) in
+                completion(response.result)
+        }
+    }
+
+
+    func loginUser(with email: String, password: String, completion: @escaping (Result<LoginData>) -> ()) {
+
+        let parameters: [String: String] = [
+            "email": email,
+            "password": password
+        ]
+
+        Alamofire
+            .request("https://api.infinum.academy/api/users",
+                     method: .post,
+                     parameters: parameters,
+                     encoding: JSONEncoding.default)
+            .validate()
+            .responseDecodableObject(keyPath: "data", decoder: JSONDecoder()) { (response: DataResponse<LoginData>) in
+                completion(response.result)
+            }
+
+    }
+
 }

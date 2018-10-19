@@ -29,6 +29,8 @@
 		8C52B3112178B9DB0048C730 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B30B2178B9DB0048C730 /* HomeViewController.swift */; };
 		8C52B3122178B9DB0048C730 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B30C2178B9DB0048C730 /* HomeInteractor.swift */; };
 		8C52B3132178B9DB0048C730 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B30D2178B9DB0048C730 /* HomeWireframe.swift */; };
+		8C52B3162179BC980048C730 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B3152179BC980048C730 /* LoginData.swift */; };
+		8C52B3182179C9780048C730 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B3172179C9780048C730 /* User.swift */; };
 		CE3808578D6357A009BB0079 /* Pods_TVShows.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E9441FE0D2F82E902A5806 /* Pods_TVShows.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		8C52B30B2178B9DB0048C730 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8C52B30C2178B9DB0048C730 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		8C52B30D2178B9DB0048C730 /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		8C52B3152179BC980048C730 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		8C52B3172179C9780048C730 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9DD26A5AAE59D685F38A7DA3 /* Pods-TVShows.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShows.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVShows/Pods-TVShows.release.xcconfig"; sourceTree = "<group>"; };
 		A0E9441FE0D2F82E902A5806 /* Pods_TVShows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4773ED7C57C4EC0E62F8434 /* Pods-TVShows.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShows.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVShows/Pods-TVShows.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		8C52B2C5217748B80048C730 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8C52B3142179BC5A0048C730 /* Models */,
 				8C52B2CD21774AF10048C730 /* API */,
 				8C52B2CF21774B000048C730 /* Extensions */,
 				8C52B2D021774B120048C730 /* Views */,
@@ -225,6 +230,15 @@
 				8C52B30D2178B9DB0048C730 /* HomeWireframe.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		8C52B3142179BC5A0048C730 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8C52B3152179BC980048C730 /* LoginData.swift */,
+				8C52B3172179C9780048C730 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F528AE6ACDAC1DB74618CAE0 /* Frameworks */ = {
@@ -374,6 +388,7 @@
 				8C52B3132178B9DB0048C730 /* HomeWireframe.swift in Sources */,
 				8C52B2FA2178759F0048C730 /* LoginPresenter.swift in Sources */,
 				8C52B2EE217750410048C730 /* PresenterInterface.swift in Sources */,
+				8C52B3182179C9780048C730 /* User.swift in Sources */,
 				8C52B30F2178B9DB0048C730 /* HomeInterfaces.swift in Sources */,
 				8C52B2F92178759F0048C730 /* LoginInterfaces.swift in Sources */,
 				8C52B2CC217749FF0048C730 /* Initializable.swift in Sources */,
@@ -381,6 +396,7 @@
 				8C52B3112178B9DB0048C730 /* HomeViewController.swift in Sources */,
 				8C52B2ED217750410048C730 /* UIStoryboardExtension.swift in Sources */,
 				8C52B2EC217750410048C730 /* BaseWireframe.swift in Sources */,
+				8C52B3162179BC980048C730 /* LoginData.swift in Sources */,
 				8C52B2FB2178759F0048C730 /* LoginViewController.swift in Sources */,
 				8C52B2FD2178759F0048C730 /* LoginWireframe.swift in Sources */,
 				8C52B3122178B9DB0048C730 /* HomeInteractor.swift in Sources */,

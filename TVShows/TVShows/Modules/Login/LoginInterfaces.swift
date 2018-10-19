@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import Alamofire
 
 enum LoginNavigationOption {
     case home
@@ -28,4 +29,8 @@ protocol LoginPresenterInterface: PresenterInterface {
 }
 
 protocol LoginInteractorInterface: InteractorInterface {
+
+    func loginUser(with email: String, password: String, completion: @escaping (Result<LoginData>) -> ())
+    func registerUser(with email: String, password: String, completion: @escaping (Result<LoginData>) -> ())
+    
 }
