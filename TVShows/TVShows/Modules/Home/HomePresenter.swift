@@ -30,4 +30,11 @@ final class HomePresenter {
 // MARK: - Extensions -
 
 extension HomePresenter: HomePresenterInterface {
+
+    func viewDidLoad() {
+        //Loading
+        //interactor - get data
+        // reload view
+        print("PRESENTER VIEW DID LOAD")
+    }
 }

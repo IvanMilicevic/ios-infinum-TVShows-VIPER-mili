@@ -14,12 +14,24 @@ final class HomeViewController: UIViewController {
 
     // MARK: - Public properties -
 
+    @IBOutlet weak var homeTableView: UITableView! {
+        didSet {
+            homeTableView.dataSource = self
+            homeTableView.delegate = self
+            homeTableView.estimatedRowHeight = 44
+            homeTableView.separatorStyle = .none
+        }
+    }
+
     var presenter: HomePresenterInterface!
+
+    private var showsArray: [Show] = []
 
     // MARK: - Lifecycle -
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
     }
 	
 }
@@ -27,4 +39,25 @@ final class HomeViewController: UIViewController {
 // MARK: - Extensions -
 
 extension HomeViewController: HomeViewInterface {
+}
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1 //todo
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell() //todo
+    }
+
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+
+}
+
+extension HomeViewController: UITableViewDelegate {
+
 }

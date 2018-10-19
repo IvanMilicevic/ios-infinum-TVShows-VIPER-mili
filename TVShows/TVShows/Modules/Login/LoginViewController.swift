@@ -25,6 +25,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet private weak var createAnAccountButton: UIButton!
 
 
+    @IBOutlet private weak var scrollView: UIScrollView!
     // MARK: - Lifecycle -
 
     override func viewDidLoad() {
@@ -34,6 +35,7 @@ final class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        _registerForKeyboardNotifications()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -53,7 +55,35 @@ final class LoginViewController: UIViewController {
 
         // ovdje da promjenim ikonicu??
     }
-    
+
+    private func _registerForKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+    }
+
+    // MARK: - @objc functions
+    @objc func keyboardWillShow(notification: NSNotification) {
+        //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        scrollView.contentInset = contentInset
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
+    }
     
 
 }
