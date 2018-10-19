@@ -18,7 +18,9 @@ final class LoginInteractor {
 // MARK: - Extensions -
 
 extension LoginInteractor: LoginInteractorInterface {
-    func registerUser(with email: String, password: String, completion: @escaping (Result<LoginData>) -> ()) {
+
+    func loginUser(with email: String, password: String, completion: @escaping (Result<LoginData>) -> ()) {
+
         let parameters: [String: String] = [
             "email": email,
             "password": password
@@ -32,12 +34,11 @@ extension LoginInteractor: LoginInteractorInterface {
             .validate()
             .responseDecodableObject(keyPath: "data", decoder: JSONDecoder()) { (response: DataResponse<LoginData>) in
                 completion(response.result)
-        }
+            }
+
     }
 
-
-    func loginUser(with email: String, password: String, completion: @escaping (Result<LoginData>) -> ()) {
-
+    func registerUser(with email: String, password: String, completion: @escaping (Result<User>) -> ()) {
         let parameters: [String: String] = [
             "email": email,
             "password": password
@@ -49,10 +50,9 @@ extension LoginInteractor: LoginInteractorInterface {
                      parameters: parameters,
                      encoding: JSONEncoding.default)
             .validate()
-            .responseDecodableObject(keyPath: "data", decoder: JSONDecoder()) { (response: DataResponse<LoginData>) in
+            .responseDecodableObject(keyPath: "data", decoder: JSONDecoder()) { (response: DataResponse<User>) in
                 completion(response.result)
-            }
-
+        }
     }
 
 }

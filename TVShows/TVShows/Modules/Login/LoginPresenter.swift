@@ -38,8 +38,6 @@ extension LoginPresenter: LoginPresenterInterface {
         _view.showProgressHUD()
         _interactor.loginUser(with: email, password: password) { result in
 
-
-
             switch result {
             case .success(let loginData):
                     self._view.hideProgressHUD()
@@ -50,14 +48,23 @@ extension LoginPresenter: LoginPresenterInterface {
             }
         }
 
-
     }
 
     func didSelectCreateAnAccountAction(with email: String?, password: String?) {
-        guard let _email = email, let _password = password else {
+        guard let email = email, let password = password else {
             return
         }
-        print(_email + _password)
+        _view.showProgressHUD()
+        _interactor.registerUser(with: email, password: password) { result in
+
+            switch result {
+            case .success(let user):
+                self._view.successProgressHUD()
+            case .failure(let error):
+                self._view.hideProgressHUD()
+                //TODO
+            }
+        }
 
     }
 

@@ -50,7 +50,7 @@ final class LoginViewController: UIViewController {
         presenter.didSelectCreateAnAccountAction(with: emailTextField.text, password: passwordTextField.text)
     }
     @IBAction func _rememberMeButtonActionHandler(_ sender: Any) {
-        presenter.didSelectCreateAnAccountAction(with: emailTextField.text, password: passwordTextField.text)
+
         // ovdje da promjenim ikonicu??
     }
     

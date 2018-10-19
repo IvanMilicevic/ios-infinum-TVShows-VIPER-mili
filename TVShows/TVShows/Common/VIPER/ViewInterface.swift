@@ -15,4 +15,8 @@ extension ViewInterface {
     func hideProgressHUD() {
         SVProgressHUD.dismiss()
     }
+
+    func successProgressHUD() {
+        SVProgressHUD.showSuccess(withStatus: "Success")
+    }
 }
