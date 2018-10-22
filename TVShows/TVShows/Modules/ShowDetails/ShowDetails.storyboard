@@ -42,9 +42,6 @@
                                                 <constraint firstItem="eXO-az-spu" firstAttribute="leading" secondItem="eQG-yS-c13" secondAttribute="leading" id="irw-1g-Y9N"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="showImageView" destination="eXO-az-spu" id="OkU-az-V3g"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TVShowsDescriptionCell" rowHeight="157" id="65R-fB-0Dl" customClass="TVShowsDescriptionCell" customModule="TVShows" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="428" width="375" height="157"/>
@@ -99,11 +96,6 @@
                                                 <constraint firstItem="GlO-Vk-iAR" firstAttribute="top" secondItem="cAP-Z3-Yps" secondAttribute="top" constant="10" id="vgN-Ej-Gl1"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="numberOfEpisodes" destination="6if-kH-QkH" id="tdf-pT-WNc"/>
-                                            <outlet property="showDescription" destination="gl7-yZ-MkZ" id="pTb-aO-xEV"/>
-                                            <outlet property="showTitle" destination="GlO-Vk-iAR" id="xOF-z8-7sA"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TVShowsEpisodeCell" rowHeight="57" id="iZQ-et-wcI" customClass="TVShowsEpisodeCell" customModule="TVShows" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="585" width="375" height="57"/>
@@ -144,10 +136,6 @@
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="exl-ux-ekx" secondAttribute="trailing" constant="40" id="utY-QY-vkl"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="episodeTitle" destination="exl-ux-ekx" id="crE-Nq-0EL"/>
-                                            <outlet property="seasonEpisode" destination="eG5-cs-6Br" id="Pn9-hT-QVz"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -158,6 +146,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrW-or-BI6" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="20" y="40" width="32" height="32"/>
                                 <state key="normal" image="ic-navigate-back"/>
+                                <connections>
+                                    <action selector="didPressBackButton:" destination="zIc-eW-6fX" eventType="touchUpInside" id="hZX-nY-hEE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

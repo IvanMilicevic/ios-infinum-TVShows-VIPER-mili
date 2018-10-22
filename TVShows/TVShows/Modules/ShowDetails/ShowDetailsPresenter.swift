@@ -34,4 +34,8 @@ final class ShowDetailsPresenter {
 // MARK: - Extensions -
 
 extension ShowDetailsPresenter: ShowDetailsPresenterInterface {
+    func didPressBackButton() {
+        _wireframe.navigate(to: .home)
+    }
+
 }

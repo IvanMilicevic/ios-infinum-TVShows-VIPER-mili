@@ -22,6 +22,7 @@ protocol ShowDetailsViewInterface: ViewInterface {
 }
 
 protocol ShowDetailsPresenterInterface: PresenterInterface {
+    func didPressBackButton()
 }
 
 protocol ShowDetailsInteractorInterface: InteractorInterface {

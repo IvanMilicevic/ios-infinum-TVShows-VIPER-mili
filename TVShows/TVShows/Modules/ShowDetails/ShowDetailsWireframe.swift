@@ -34,5 +34,15 @@ final class ShowDetailsWireframe: BaseWireframe {
 extension ShowDetailsWireframe: ShowDetailsWireframeInterface {
 
     func navigate(to option: ShowDetailsNavigationOption) {
+
+        switch option {
+        case .home:
+            _goToHome()
+        }
+        
+    }
+
+    private func _goToHome() {
+        navigationController?.popViewController(animated: true)
     }
 }

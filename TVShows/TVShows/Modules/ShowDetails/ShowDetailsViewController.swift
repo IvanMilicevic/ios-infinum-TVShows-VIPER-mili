@@ -26,6 +26,9 @@ final class ShowDetailsViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 	
+    @IBAction func didPressBackButton(_ sender: Any) {
+        presenter.didPressBackButton()
+    }
 }
 
 // MARK: - Extensions -
