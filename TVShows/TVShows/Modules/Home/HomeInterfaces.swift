@@ -13,6 +13,7 @@ import Alamofire
 
 enum HomeNavigationOption {
     case login
+    case showDetails
 }
 
 protocol HomeWireframeInterface: WireframeInterface {

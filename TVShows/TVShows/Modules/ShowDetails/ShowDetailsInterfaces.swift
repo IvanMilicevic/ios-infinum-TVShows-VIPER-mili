@@ -11,6 +11,7 @@
 import UIKit
 
 enum ShowDetailsNavigationOption {
+    case home
 }
 
 protocol ShowDetailsWireframeInterface: WireframeInterface {
