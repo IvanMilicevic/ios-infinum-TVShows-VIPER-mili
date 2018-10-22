@@ -98,14 +98,9 @@ extension HomeViewController: UITableViewDelegate {
         }
     }
 
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let storyboard = UIStoryboard(name: "ShowDetails", bundle: nil)
-//        let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController_ShowDetails")
-//            as! ShowDetailsViewController
-//
-//        viewController.configure(id: showsArray[indexPath.row].id, login: loginData!)
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        navigationController?.pushViewController(viewController, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelectShow(at: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
 }

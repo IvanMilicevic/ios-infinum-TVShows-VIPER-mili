@@ -13,7 +13,7 @@ import Alamofire
 
 enum HomeNavigationOption {
     case login
-    case showDetails
+    case showDetails(show: Show)
 }
 
 protocol HomeWireframeInterface: WireframeInterface {
@@ -29,6 +29,7 @@ protocol HomePresenterInterface: PresenterInterface {
     func numberOfRowsInSection() -> Int
     func getShow(at index: Int) -> Show
     func removeShow(at index: Int)
+    func didSelectShow(at index: Int)
 }
 
 protocol HomeInteractorInterface: InteractorInterface {

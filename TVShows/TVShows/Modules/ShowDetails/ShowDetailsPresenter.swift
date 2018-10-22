@@ -18,13 +18,17 @@ final class ShowDetailsPresenter {
     private var _interactor: ShowDetailsInteractorInterface
     private var _wireframe: ShowDetailsWireframeInterface
 
+    private var _show: Show
+
     // MARK: - Lifecycle -
 
-    init(wireframe: ShowDetailsWireframeInterface, view: ShowDetailsViewInterface, interactor: ShowDetailsInteractorInterface) {
+    init(wireframe: ShowDetailsWireframeInterface, view: ShowDetailsViewInterface, interactor: ShowDetailsInteractorInterface, show: Show) {
         _wireframe = wireframe
         _view = view
         _interactor = interactor
+        _show = show
     }
+
 }
 
 // MARK: - Extensions -

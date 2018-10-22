@@ -18,12 +18,12 @@ final class ShowDetailsWireframe: BaseWireframe {
 
     // MARK: - Module setup -
 
-    init() {
+    init(show: Show) {
         let moduleViewController = _storyboard.instantiateViewController(ofType: ShowDetailsViewController.self)
         super.init(viewController: moduleViewController)
         
         let interactor = ShowDetailsInteractor()
-        let presenter = ShowDetailsPresenter(wireframe: self, view: moduleViewController, interactor: interactor)
+        let presenter = ShowDetailsPresenter(wireframe: self, view: moduleViewController, interactor: interactor, show: show)
         moduleViewController.presenter = presenter
     }
 

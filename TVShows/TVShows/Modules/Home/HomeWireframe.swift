@@ -37,11 +37,20 @@ extension HomeWireframe: HomeWireframeInterface {
         switch option {
             case .login:
             _goToLogin()
+            case .showDetails(let show):
+            _goToShowDetails(show: show)
         }
 
     }
 
     private func _goToLogin() {
         navigationController?.popViewController(animated: true)
+    }
+
+    private func _goToShowDetails(show: Show) {
+
+        let wireframe = ShowDetailsWireframe(show: show)
+
+        navigationController?.pushWireframe(wireframe)
     }
 }

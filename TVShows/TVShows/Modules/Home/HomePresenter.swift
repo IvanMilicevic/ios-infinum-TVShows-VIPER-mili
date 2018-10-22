@@ -32,6 +32,8 @@ final class HomePresenter {
 
 extension HomePresenter: HomePresenterInterface {
 
+
+
     func viewDidLoad() {
         _view.showProgressHUD()
         _interactor.fetchShows() { result in
@@ -52,6 +54,10 @@ extension HomePresenter: HomePresenterInterface {
         _wireframe.navigate(to: .login)
     }
 
+    func didSelectShow(at index: Int) {
+        _wireframe.navigate(to: .showDetails(show: showsArray[index]))
+    }
+
     func numberOfRowsInSection() -> Int {
         return showsArray.count
     }
@@ -63,4 +69,5 @@ extension HomePresenter: HomePresenterInterface {
     func removeShow(at index: Int) {
         showsArray.remove(at: index)
     }
+
 }
