@@ -14,4 +14,26 @@ class ShowDetailsDescriptionCell: UITableViewCell {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var numberOfEpisodesLabel: UILabel!
 
+    // MARK: - View Lifecycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.selectionStyle = UITableViewCell.SelectionStyle.none
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        titleLabel.text = nil
+        descriptionTextView.text = nil
+        numberOfEpisodesLabel.text = "0"
+    }
+
+
+    // MARK: - Functions
+    func configure(with item: ShowDetails, count: Int) {
+        titleLabel.text = item.title
+        descriptionTextView.text = item.description
+        numberOfEpisodesLabel.text = String(count)
+    }
+
 }

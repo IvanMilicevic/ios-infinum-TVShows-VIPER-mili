@@ -19,6 +19,8 @@ final class ShowDetailsPresenter {
     private var _wireframe: ShowDetailsWireframeInterface
 
     private var _show: Show
+    private var _showDetails: ShowDetails?
+    private var _episodesArray: [ShowEpisode] = []
 
     // MARK: - Lifecycle -
 
@@ -34,8 +36,24 @@ final class ShowDetailsPresenter {
 // MARK: - Extensions -
 
 extension ShowDetailsPresenter: ShowDetailsPresenterInterface {
+
+    func viewDidLoad() {
+        _interactor.fetchShowDetails(show: _show) { result in
+            switch result {
+            case .success(let showDetails):
+                print (showDetails)
+            case .failure(let error):
+                print (error)
+            }
+
+
+        }
+    }
+
     func didPressBackButton() {
         _wireframe.navigate(to: .home)
     }
+
+
 
 }

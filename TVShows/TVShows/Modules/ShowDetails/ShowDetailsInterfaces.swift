@@ -9,6 +9,8 @@
 //
 
 import UIKit
+import Alamofire
+import CodableAlamofire
 
 enum ShowDetailsNavigationOption {
     case home
@@ -26,4 +28,6 @@ protocol ShowDetailsPresenterInterface: PresenterInterface {
 }
 
 protocol ShowDetailsInteractorInterface: InteractorInterface {
+    func fetchShowDetails(show: Show, completion: @escaping (Result<ShowDetails>) -> ())
+    func fetchEpisodes(show: Show, completion: @escaping (Result<[ShowEpisode]>) -> ())
 }
