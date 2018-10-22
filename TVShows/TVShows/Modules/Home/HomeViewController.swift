@@ -43,11 +43,17 @@ extension HomeViewController: HomeViewInterface {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 //todo
+        return showsArray.count //todo
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell() //todo
+        let cell = homeTableView.dequeueReusableCell(
+            withIdentifier: "TVShowsCell",
+            for: indexPath
+            ) as! HomeCell
+
+        cell.configure(with: showsArray[indexPath.row], loginData: loginData)
+        return cell
     }
 
 

@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import Alamofire
 
 enum HomeNavigationOption {
     case login
@@ -25,4 +26,5 @@ protocol HomePresenterInterface: PresenterInterface {
 }
 
 protocol HomeInteractorInterface: InteractorInterface {
+    func fetchShows(completion: @escaping (Result<[Show]>) -> ())
 }
