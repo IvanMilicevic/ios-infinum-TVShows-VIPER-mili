@@ -45,12 +45,11 @@ extension HomePresenter: HomePresenterInterface {
                 self._view.showErrorOnProgressHUD()
                 print(error)
             }
-
-
         }
-        //interactor - get data
-        // reload view
-        print("PRESENTER VIEW DID LOAD")
+    }
+
+    func didPressLogout() {
+        _wireframe.navigate(to: .login)
     }
 
     func numberOfRowsInSection() -> Int {
@@ -59,5 +58,9 @@ extension HomePresenter: HomePresenterInterface {
 
     func getShow(at index: Int) -> Show {
         return showsArray[index]
+    }
+
+    func removeShow(at index: Int) {
+        showsArray.remove(at: index)
     }
 }

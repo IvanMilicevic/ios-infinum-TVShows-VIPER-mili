@@ -34,5 +34,14 @@ final class HomeWireframe: BaseWireframe {
 extension HomeWireframe: HomeWireframeInterface {
 
     func navigate(to option: HomeNavigationOption) {
+        switch option {
+            case .login:
+            _goToLogin()
+        }
+
+    }
+
+    private func _goToLogin() {
+        navigationController?.popViewController(animated: true)
     }
 }

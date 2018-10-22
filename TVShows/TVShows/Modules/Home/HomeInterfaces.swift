@@ -24,8 +24,10 @@ protocol HomeViewInterface: ViewInterface {
 }
 
 protocol HomePresenterInterface: PresenterInterface {
+    func didPressLogout()
     func numberOfRowsInSection() -> Int
     func getShow(at index: Int) -> Show
+    func removeShow(at index: Int)
 }
 
 protocol HomeInteractorInterface: InteractorInterface {

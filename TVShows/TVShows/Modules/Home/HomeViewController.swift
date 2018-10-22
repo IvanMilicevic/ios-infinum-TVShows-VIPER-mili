@@ -30,6 +30,21 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+
+    }
+
+    private func configureNavigationBar() {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        self.title = "Shows"
+        let img = UIImage(named: "ic-logout")!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: img,
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(logout))
+    }
+
+    @objc func logout() {
+        presenter.didPressLogout()
     }
 	
 }
@@ -41,6 +56,7 @@ extension HomeViewController: HomeViewInterface {
 
     func reloadData() {
         homeTableView.reloadData()
+        configureNavigationBar()
     }
 
 }
@@ -69,5 +85,17 @@ extension HomeViewController: UITableViewDataSource {
 }
 
 extension HomeViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete){
+            presenter.removeShow(at: indexPath.item)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+
+        }
+    }
 
 }
