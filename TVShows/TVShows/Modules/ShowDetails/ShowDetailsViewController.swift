@@ -35,4 +35,11 @@ final class ShowDetailsViewController: UIViewController {
 // MARK: - Extensions -
 
 extension ShowDetailsViewController: ShowDetailsViewInterface {
+    
+    func reloadData() {
+        //tableView.reloadData
+    }
+
+
+
 }

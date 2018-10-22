@@ -41,13 +41,21 @@ extension ShowDetailsPresenter: ShowDetailsPresenterInterface {
         _interactor.fetchShowDetails(show: _show) { result in
             switch result {
             case .success(let showDetails):
-                print (showDetails)
+                self._showDetails = showDetails
+                self._interactor.fetchEpisodes(show: self._show) { result in
+                    switch result {
+                    case .success(let episodes):
+                        self._episodesArray = episodes
+                        self._view.reloadData()
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
             case .failure(let error):
                 print (error)
             }
-
-
         }
+
     }
 
     func didPressBackButton() {

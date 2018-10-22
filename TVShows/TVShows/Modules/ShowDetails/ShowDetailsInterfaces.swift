@@ -21,6 +21,7 @@ protocol ShowDetailsWireframeInterface: WireframeInterface {
 }
 
 protocol ShowDetailsViewInterface: ViewInterface {
+    func reloadData()
 }
 
 protocol ShowDetailsPresenterInterface: PresenterInterface {
