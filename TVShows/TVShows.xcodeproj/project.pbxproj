@@ -20,6 +20,12 @@
 		8C4468CA217DFEBF00CA9DD3 /* ShowDetailsDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468C9217DFEBF00CA9DD3 /* ShowDetailsDescriptionCell.swift */; };
 		8C4468CC217DFF1500CA9DD3 /* ShowDetailsEpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468CB217DFF1500CA9DD3 /* ShowDetailsEpisodeCell.swift */; };
 		8C4468CE217E0B1E00CA9DD3 /* ShowEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468CD217E0B1E00CA9DD3 /* ShowEpisode.swift */; };
+		8C4468D6217E650000CA9DD3 /* AddNewEpisode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4468D0217E650000CA9DD3 /* AddNewEpisode.storyboard */; };
+		8C4468D7217E650000CA9DD3 /* AddNewEpisodeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468D1217E650000CA9DD3 /* AddNewEpisodeInterfaces.swift */; };
+		8C4468D8217E650000CA9DD3 /* AddNewEpisodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468D2217E650000CA9DD3 /* AddNewEpisodePresenter.swift */; };
+		8C4468D9217E650000CA9DD3 /* AddNewEpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468D3217E650000CA9DD3 /* AddNewEpisodeViewController.swift */; };
+		8C4468DA217E650000CA9DD3 /* AddNewEpisodeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468D4217E650000CA9DD3 /* AddNewEpisodeInteractor.swift */; };
+		8C4468DB217E650000CA9DD3 /* AddNewEpisodeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468D5217E650000CA9DD3 /* AddNewEpisodeWireframe.swift */; };
 		8C52B2CA217749C90048C730 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B2C9217749C90048C730 /* Constants.swift */; };
 		8C52B2CC217749FF0048C730 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B2CB217749FF0048C730 /* Initializable.swift */; };
 		8C52B2EB217750410048C730 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B2E6217750410048C730 /* InteractorInterface.swift */; };
@@ -64,6 +70,12 @@
 		8C4468C9217DFEBF00CA9DD3 /* ShowDetailsDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsDescriptionCell.swift; sourceTree = "<group>"; };
 		8C4468CB217DFF1500CA9DD3 /* ShowDetailsEpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsEpisodeCell.swift; sourceTree = "<group>"; };
 		8C4468CD217E0B1E00CA9DD3 /* ShowEpisode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEpisode.swift; sourceTree = "<group>"; };
+		8C4468D0217E650000CA9DD3 /* AddNewEpisode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewEpisode.storyboard; sourceTree = "<group>"; };
+		8C4468D1217E650000CA9DD3 /* AddNewEpisodeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEpisodeInterfaces.swift; sourceTree = "<group>"; };
+		8C4468D2217E650000CA9DD3 /* AddNewEpisodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEpisodePresenter.swift; sourceTree = "<group>"; };
+		8C4468D3217E650000CA9DD3 /* AddNewEpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEpisodeViewController.swift; sourceTree = "<group>"; };
+		8C4468D4217E650000CA9DD3 /* AddNewEpisodeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEpisodeInteractor.swift; sourceTree = "<group>"; };
+		8C4468D5217E650000CA9DD3 /* AddNewEpisodeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEpisodeWireframe.swift; sourceTree = "<group>"; };
 		8C52B2C9217749C90048C730 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8C52B2CB217749FF0048C730 /* Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializable.swift; sourceTree = "<group>"; };
 		8C52B2E6217750410048C730 /* InteractorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
@@ -169,6 +181,19 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		8C4468CF217E64CB00CA9DD3 /* AddNewEpisode */ = {
+			isa = PBXGroup;
+			children = (
+				8C4468D0217E650000CA9DD3 /* AddNewEpisode.storyboard */,
+				8C4468D1217E650000CA9DD3 /* AddNewEpisodeInterfaces.swift */,
+				8C4468D2217E650000CA9DD3 /* AddNewEpisodePresenter.swift */,
+				8C4468D3217E650000CA9DD3 /* AddNewEpisodeViewController.swift */,
+				8C4468D4217E650000CA9DD3 /* AddNewEpisodeInteractor.swift */,
+				8C4468D5217E650000CA9DD3 /* AddNewEpisodeWireframe.swift */,
+			);
+			path = AddNewEpisode;
+			sourceTree = "<group>";
+		};
 		8C52B2C3217748140048C730 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +227,7 @@
 		8C52B2C6217748DD0048C730 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8C4468CF217E64CB00CA9DD3 /* AddNewEpisode */,
 				8C52B2F02178748C0048C730 /* Login */,
 				8C52B2F1217875070048C730 /* Home */,
 				8C4468B9217DE96F00CA9DD3 /* ShowDetails */,
@@ -376,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C24E8CD21774250005D3FB5 /* LaunchScreen.storyboard in Resources */,
+				8C4468D6217E650000CA9DD3 /* AddNewEpisode.storyboard in Resources */,
 				8C24E8CA21774250005D3FB5 /* Assets.xcassets in Resources */,
 				8C52B2F82178759F0048C730 /* Login.storyboard in Resources */,
 				8C4468C0217DE9A900CA9DD3 /* ShowDetails.storyboard in Resources */,
@@ -449,8 +476,11 @@
 			files = (
 				8C24E8C32177424E005D3FB5 /* AppDelegate.swift in Sources */,
 				8C52B2EF217750410048C730 /* ViewInterface.swift in Sources */,
+				8C4468D8217E650000CA9DD3 /* AddNewEpisodePresenter.swift in Sources */,
 				8C52B2EB217750410048C730 /* InteractorInterface.swift in Sources */,
+				8C4468DA217E650000CA9DD3 /* AddNewEpisodeInteractor.swift in Sources */,
 				8C52B31F2179DB3F0048C730 /* ShowDetails.swift in Sources */,
+				8C4468D9217E650000CA9DD3 /* AddNewEpisodeViewController.swift in Sources */,
 				8C52B31A2179D92A0048C730 /* NetworkManager.swift in Sources */,
 				8C4468C8217DFE7900CA9DD3 /* ShowDetailsImageCell.swift in Sources */,
 				8C52B3102178B9DB0048C730 /* HomePresenter.swift in Sources */,
@@ -467,12 +497,14 @@
 				8C52B2EE217750410048C730 /* PresenterInterface.swift in Sources */,
 				8C52B3182179C9780048C730 /* User.swift in Sources */,
 				8C52B30F2178B9DB0048C730 /* HomeInterfaces.swift in Sources */,
+				8C4468DB217E650000CA9DD3 /* AddNewEpisodeWireframe.swift in Sources */,
 				8C4468C2217DE9A900CA9DD3 /* ShowDetailsPresenter.swift in Sources */,
 				8C52B2F92178759F0048C730 /* LoginInterfaces.swift in Sources */,
 				8C52B2CC217749FF0048C730 /* Initializable.swift in Sources */,
 				8C52B2FC2178759F0048C730 /* LoginInteractor.swift in Sources */,
 				8C52B31D2179DAAF0048C730 /* HomeCell.swift in Sources */,
 				8C52B3112178B9DB0048C730 /* HomeViewController.swift in Sources */,
+				8C4468D7217E650000CA9DD3 /* AddNewEpisodeInterfaces.swift in Sources */,
 				8C52B2ED217750410048C730 /* UIStoryboardExtension.swift in Sources */,
 				8C52B2EC217750410048C730 /* BaseWireframe.swift in Sources */,
 				8C52B3162179BC980048C730 /* LoginData.swift in Sources */,
