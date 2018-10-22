@@ -26,6 +26,12 @@ protocol ShowDetailsViewInterface: ViewInterface {
 
 protocol ShowDetailsPresenterInterface: PresenterInterface {
     func didPressBackButton()
+    func getShowDetails() -> ShowDetails?
+    func getEpisodesCount() -> Int
+    func numberOfRowsInSection() -> Int
+    func getEpisode(at index: Int) -> ShowEpisode
+    func removeEpisode(at index: Int)
+    func didSelectEpisode(at index: Int)
 }
 
 protocol ShowDetailsInteractorInterface: InteractorInterface {

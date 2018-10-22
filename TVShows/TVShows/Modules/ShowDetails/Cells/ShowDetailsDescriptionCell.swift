@@ -30,10 +30,10 @@ class ShowDetailsDescriptionCell: UITableViewCell {
 
 
     // MARK: - Functions
-    func configure(with item: ShowDetails, count: Int) {
+    func configure(with item: ShowDetails, episodesCount: Int) {
         titleLabel.text = item.title
         descriptionTextView.text = item.description
-        numberOfEpisodesLabel.text = String(count)
+        numberOfEpisodesLabel.text = String(episodesCount)
     }
 
 }

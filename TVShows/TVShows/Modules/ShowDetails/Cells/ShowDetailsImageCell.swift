@@ -11,5 +11,21 @@ import UIKit
 class ShowDetailsImageCell: UITableViewCell {
 
     @IBOutlet weak var showDetailsImageView: UIImageView!
-    
+
+    // MARK: - View Lifecycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.selectionStyle = UITableViewCell.SelectionStyle.none
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+//        showDetailsImageView.image = nesto
+    }
+
+    // MARK: - Functions
+    func configure(with item: ShowDetails) {
+
+    }
 }

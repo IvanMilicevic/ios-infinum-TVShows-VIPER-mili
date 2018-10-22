@@ -37,6 +37,32 @@ final class ShowDetailsPresenter {
 
 extension ShowDetailsPresenter: ShowDetailsPresenterInterface {
 
+    func getEpisodesCount() -> Int {
+        return _episodesArray.count
+    }
+
+
+    func getShowDetails() -> ShowDetails? {
+        return _showDetails
+    }
+
+    func numberOfRowsInSection() -> Int {
+        return _episodesArray.count
+    }
+
+    func getEpisode(at index: Int) -> ShowEpisode {
+        return _episodesArray[index]
+    }
+
+    func removeEpisode(at index: Int) {
+        _episodesArray.remove(at: index)
+    }
+
+    func didSelectEpisode(at index: Int) {
+        //TODO
+    }
+
+
     func viewDidLoad() {
         _interactor.fetchShowDetails(show: _show) { result in
             switch result {
