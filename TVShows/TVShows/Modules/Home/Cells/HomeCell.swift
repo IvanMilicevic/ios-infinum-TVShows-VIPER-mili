@@ -13,9 +13,10 @@ import Alamofire
 class HomeCell: UITableViewCell {
 
     // MARK: - IBOutlets
-    @IBOutlet private weak var cellLabel: UILabel!
-    @IBOutlet private weak var cellImage: UIImageView!
 
+    @IBOutlet weak var cellLabel: UILabel!
+    @IBOutlet weak var cellImage: UIImageView!
+    
     // MARK: - Private
     private let placeholderImg: UIImage = UIImage(named: "missing")!
 

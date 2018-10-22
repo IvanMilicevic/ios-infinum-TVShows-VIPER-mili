@@ -20,9 +20,12 @@ protocol HomeWireframeInterface: WireframeInterface {
 }
 
 protocol HomeViewInterface: ViewInterface {
+    func reloadData()
 }
 
 protocol HomePresenterInterface: PresenterInterface {
+    func numberOfRowsInSection() -> Int
+    func getShow(at index: Int) -> Show
 }
 
 protocol HomeInteractorInterface: InteractorInterface {

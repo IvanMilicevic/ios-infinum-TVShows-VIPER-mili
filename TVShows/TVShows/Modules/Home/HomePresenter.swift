@@ -18,6 +18,7 @@ final class HomePresenter {
     private var _interactor: HomeInteractorInterface
     private var _wireframe: HomeWireframeInterface
 
+    private var showsArray: [Show] = []
     // MARK: - Lifecycle -
 
     init(wireframe: HomeWireframeInterface, view: HomeViewInterface, interactor: HomeInteractorInterface) {
@@ -35,11 +36,11 @@ extension HomePresenter: HomePresenterInterface {
         _view.showProgressHUD()
         _interactor.fetchShows() { result in
 
-            //Guard let za self ?
-
             switch result {
             case .success(let shows):
                 self._view.hideProgressHUD()
+                self.showsArray = shows
+                self._view.reloadData()
             case .failure(let error):
                 self._view.showErrorOnProgressHUD()
                 print(error)
@@ -50,5 +51,13 @@ extension HomePresenter: HomePresenterInterface {
         //interactor - get data
         // reload view
         print("PRESENTER VIEW DID LOAD")
+    }
+
+    func numberOfRowsInSection() -> Int {
+        return showsArray.count
+    }
+
+    func getShow(at index: Int) -> Show {
+        return showsArray[index]
     }
 }

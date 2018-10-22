@@ -25,8 +25,6 @@ final class HomeViewController: UIViewController {
 
     var presenter: HomePresenterInterface!
 
-    private var showsArray: [Show] = []
-
     // MARK: - Lifecycle -
 
     override func viewDidLoad() {
@@ -39,11 +37,17 @@ final class HomeViewController: UIViewController {
 // MARK: - Extensions -
 
 extension HomeViewController: HomeViewInterface {
+
+
+    func reloadData() {
+        homeTableView.reloadData()
+    }
+
 }
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return showsArray.count //todo
+        return presenter.numberOfRowsInSection()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,7 +56,7 @@ extension HomeViewController: UITableViewDataSource {
             for: indexPath
             ) as! HomeCell
 
-        cell.configure(with: showsArray[indexPath.row], loginData: loginData)
+        cell.configure(with: presenter.getShow(at: indexPath.row))
         return cell
     }
 

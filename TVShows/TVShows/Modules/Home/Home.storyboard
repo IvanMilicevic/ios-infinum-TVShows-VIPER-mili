@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TVShowsCell" rowHeight="140" id="gFt-HA-IHk" customClass="TVShowsCell" customModule="TVShows" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TVShowsCell" rowHeight="140" id="gFt-HA-IHk" customClass="HomeCell" customModule="TVShows" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gFt-HA-IHk" id="b4x-jU-TSo">
@@ -52,8 +52,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="cellImage" destination="MWs-XC-9BS" id="VgD-6V-dzM"/>
-                                            <outlet property="cellLabel" destination="RDw-1W-j91" id="Zei-ju-E3s"/>
+                                            <outlet property="cellImage" destination="MWs-XC-9BS" id="u5z-rD-E2P"/>
+                                            <outlet property="cellLabel" destination="RDw-1W-j91" id="j1r-m8-M04"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
