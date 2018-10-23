@@ -38,8 +38,8 @@ extension ShowDetailsWireframe: ShowDetailsWireframeInterface {
         switch option {
         case .home:
             _goToHome()
-        case .addNewEpisode:
-            _goToAddNewEpisode()
+        case .addNewEpisode(let show):
+            _goToAddNewEpisode(show: show)
         }
     }
 
@@ -47,8 +47,8 @@ extension ShowDetailsWireframe: ShowDetailsWireframeInterface {
         navigationController?.popViewController(animated: true)
     }
 
-    private func _goToAddNewEpisode() {
-        let wireframe = AddNewEpisodeWireframe()
+    private func _goToAddNewEpisode(show: Show) {
+        let wireframe = AddNewEpisodeWireframe(show: show)
 
         navigationController?.pushWireframe(wireframe)
     }

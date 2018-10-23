@@ -25,7 +25,7 @@ protocol AddNewEpisodeViewInterface: ViewInterface {
 
 protocol AddNewEpisodePresenterInterface: PresenterInterface {
     func didPressBackButton()
-    func didPressAddButton()
+    func didPressAddButton(episodeTitle: String, seasonNumber: String, episodeNumber: String, episodeDescription: String)
 }
 
 protocol AddNewEpisodeInteractorInterface: InteractorInterface {

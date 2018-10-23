@@ -59,7 +59,18 @@ final class AddNewEpisodeViewController: UIViewController {
     }
 
     @objc func didSelectAdd() {
-        presenter.didPressAddButton()
+        guard
+            let episodeTitle = episodeTitleTextField.text,
+            let seasonNumber = seasonNumberTextField.text,
+            let episodeNumber = episodeNumberTextField.text,
+            let episodeDescription = episodeDescriptionTextField.text
+            else {
+                return
+        }
+        presenter.didPressAddButton(episodeTitle: episodeTitle,
+                                    seasonNumber: seasonNumber,
+                                    episodeNumber: episodeNumber,
+                                    episodeDescription: episodeDescription)
     }
 
 }

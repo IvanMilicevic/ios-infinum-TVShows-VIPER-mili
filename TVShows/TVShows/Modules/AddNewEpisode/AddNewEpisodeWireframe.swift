@@ -18,12 +18,12 @@ final class AddNewEpisodeWireframe: BaseWireframe {
 
     // MARK: - Module setup -
 
-    init() {
+    init(show: Show) {
         let moduleViewController = _storyboard.instantiateViewController(ofType: AddNewEpisodeViewController.self)
         super.init(viewController: moduleViewController)
         
         let interactor = AddNewEpisodeInteractor()
-        let presenter = AddNewEpisodePresenter(wireframe: self, view: moduleViewController, interactor: interactor)
+        let presenter = AddNewEpisodePresenter(wireframe: self, view: moduleViewController, interactor: interactor, show: show)
         moduleViewController.presenter = presenter
     }
 

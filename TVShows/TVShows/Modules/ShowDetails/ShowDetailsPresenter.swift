@@ -62,7 +62,7 @@ extension ShowDetailsPresenter: ShowDetailsPresenterInterface {
     }
 
     func didPressAddNewEpisodeButton() {
-        _wireframe.navigate(to: .addNewEpisode)
+        _wireframe.navigate(to: .addNewEpisode(show: _show))
     }
 
     func viewDidLoad() {

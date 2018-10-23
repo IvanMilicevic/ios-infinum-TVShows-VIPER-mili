@@ -17,13 +17,16 @@ final class AddNewEpisodePresenter {
     private unowned var _view: AddNewEpisodeViewInterface
     private var _interactor: AddNewEpisodeInteractorInterface
     private var _wireframe: AddNewEpisodeWireframeInterface
+    private var _show: Show
+    
 
     // MARK: - Lifecycle -
 
-    init(wireframe: AddNewEpisodeWireframeInterface, view: AddNewEpisodeViewInterface, interactor: AddNewEpisodeInteractorInterface) {
+    init(wireframe: AddNewEpisodeWireframeInterface, view: AddNewEpisodeViewInterface, interactor: AddNewEpisodeInteractorInterface, show: Show) {
         _wireframe = wireframe
         _view = view
         _interactor = interactor
+        _show = show
     }
 }
 
@@ -35,8 +38,17 @@ extension AddNewEpisodePresenter: AddNewEpisodePresenterInterface {
         _wireframe.navigate(to: .showDetails)
     }
 
-    func didPressAddButton() {
+    func didPressAddButton(episodeTitle: String, seasonNumber: String, episodeNumber: String, episodeDescription: String) {
+        _interactor.uploadEpisode(showID: _show.id, episodeTitle: episodeTitle, seasonNumber: seasonNumber, episodeNumber: episodeNumber, episodeDescription: episodeDescription, episodeMediaID: "") { result in
 
+            switch result {
+            case .success(let response):
+                    print (response)
+                    self._wireframe.navigate(to: .showDetails)
+            case .failure(let error):
+                    print (error)
+            }
+        }
     }
 
 }
