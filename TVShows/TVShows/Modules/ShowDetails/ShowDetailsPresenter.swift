@@ -37,6 +37,10 @@ final class ShowDetailsPresenter {
 
 extension ShowDetailsPresenter: ShowDetailsPresenterInterface {
 
+    func reloadData() {
+        fetchData()
+    }
+
     func getEpisodesCount() -> Int {
         return _episodesArray.count
     }
@@ -66,6 +70,14 @@ extension ShowDetailsPresenter: ShowDetailsPresenterInterface {
     }
 
     func viewDidLoad() {
+        fetchData()
+    }
+
+    func didPressBackButton() {
+        _wireframe.navigate(to: .home)
+    }
+
+    private func fetchData() {
         _interactor.fetchShowDetails(show: _show) { result in
             switch result {
             case .success(let showDetails):
@@ -83,10 +95,6 @@ extension ShowDetailsPresenter: ShowDetailsPresenterInterface {
                 print (error)
             }
         }
-    }
-
-    func didPressBackButton() {
-        _wireframe.navigate(to: .home)
     }
 
 }

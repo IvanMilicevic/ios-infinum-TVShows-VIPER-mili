@@ -13,7 +13,7 @@ import Alamofire
 import CodableAlamofire
 
 enum AddNewEpisodeNavigationOption {
-    case showDetails
+    case showDetails(didAdd: Bool)
 }
 
 protocol AddNewEpisodeWireframeInterface: WireframeInterface {

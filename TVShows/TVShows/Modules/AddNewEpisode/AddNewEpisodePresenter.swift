@@ -18,6 +18,7 @@ final class AddNewEpisodePresenter {
     private var _interactor: AddNewEpisodeInteractorInterface
     private var _wireframe: AddNewEpisodeWireframeInterface
     private var _show: Show
+
     
 
     // MARK: - Lifecycle -
@@ -35,7 +36,7 @@ final class AddNewEpisodePresenter {
 extension AddNewEpisodePresenter: AddNewEpisodePresenterInterface {
 
     func didPressBackButton() {
-        _wireframe.navigate(to: .showDetails)
+        _wireframe.navigate(to: .showDetails(didAdd: false))
     }
 
     func didPressAddButton(episodeTitle: String, seasonNumber: String, episodeNumber: String, episodeDescription: String) {
@@ -44,7 +45,7 @@ extension AddNewEpisodePresenter: AddNewEpisodePresenterInterface {
             switch result {
             case .success(let response):
                     print (response)
-                    self._wireframe.navigate(to: .showDetails)
+                    self._wireframe.navigate(to: .showDetails(didAdd: true))
             case .failure(let error):
                     print (error)
             }

@@ -15,6 +15,7 @@ final class ShowDetailsWireframe: BaseWireframe {
     // MARK: - Private properties -
 
     private let _storyboard = UIStoryboard(name: "ShowDetails", bundle: nil)
+    private weak var _delegate: ShowDetailsPresenterInterface?
 
     // MARK: - Module setup -
 
@@ -25,6 +26,7 @@ final class ShowDetailsWireframe: BaseWireframe {
         let interactor = ShowDetailsInteractor()
         let presenter = ShowDetailsPresenter(wireframe: self, view: moduleViewController, interactor: interactor, show: show)
         moduleViewController.presenter = presenter
+        _delegate = presenter
     }
 
 }
@@ -48,7 +50,11 @@ extension ShowDetailsWireframe: ShowDetailsWireframeInterface {
     }
 
     private func _goToAddNewEpisode(show: Show) {
-        let wireframe = AddNewEpisodeWireframe(show: show)
+        guard let _delegate = _delegate else {
+            return
+        }
+
+        let wireframe = AddNewEpisodeWireframe(show: show, delegate : _delegate)
 
         navigationController?.pushWireframe(wireframe)
     }

@@ -34,6 +34,7 @@ protocol ShowDetailsPresenterInterface: PresenterInterface {
     func getEpisode(at index: Int) -> ShowEpisode
     func removeEpisode(at index: Int)
     func didSelectEpisode(at index: Int)
+    func reloadData()
 }
 
 protocol ShowDetailsInteractorInterface: InteractorInterface {
