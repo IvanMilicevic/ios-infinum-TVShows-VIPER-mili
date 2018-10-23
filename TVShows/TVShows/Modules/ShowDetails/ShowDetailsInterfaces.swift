@@ -14,6 +14,7 @@ import CodableAlamofire
 
 enum ShowDetailsNavigationOption {
     case home
+    case addNewEpisode
 }
 
 protocol ShowDetailsWireframeInterface: WireframeInterface {
