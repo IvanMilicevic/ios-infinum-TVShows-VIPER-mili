@@ -12,8 +12,6 @@ import UIKit
 
 final class ShowDetailsViewController: UIViewController {
 
-    // MARK: - Public properties -
-
     @IBOutlet private weak var showDetailsTableView: UITableView!{
         didSet {
             showDetailsTableView.dataSource = self
@@ -46,7 +44,6 @@ final class ShowDetailsViewController: UIViewController {
         presenter.didPressAddNewEpisodeButton()
     }
 
-
 }
 
 // MARK: - Extensions -
@@ -57,12 +54,9 @@ extension ShowDetailsViewController: ShowDetailsViewInterface {
         showDetailsTableView.reloadData()
     }
 
-
-
 }
 
 extension ShowDetailsViewController: UITableViewDataSource {
-
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -102,7 +96,6 @@ extension ShowDetailsViewController: UITableViewDataSource {
             return cell
         }
     }
-
 
 }
 

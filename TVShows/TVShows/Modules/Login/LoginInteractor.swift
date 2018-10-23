@@ -20,7 +20,6 @@ final class LoginInteractor {
 extension LoginInteractor: LoginInteractorInterface {
 
     func loginUser(with email: String, password: String, completion: @escaping (Result<LoginData>) -> ()) {
-
         let parameters: [String: String] = [
             "email": email,
             "password": password
@@ -35,7 +34,6 @@ extension LoginInteractor: LoginInteractorInterface {
             .responseDecodableObject(keyPath: "data", decoder: JSONDecoder()) { (response: DataResponse<LoginData>) in
                 completion(response.result)
             }
-
     }
 
     func registerUser(with email: String, password: String, completion: @escaping (Result<User>) -> ()) {

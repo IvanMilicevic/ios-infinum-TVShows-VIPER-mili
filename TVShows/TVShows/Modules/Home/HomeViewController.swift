@@ -12,8 +12,6 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
-    // MARK: - Public properties -
-
     @IBOutlet weak var homeTableView: UITableView! {
         didSet {
             homeTableView.dataSource = self
@@ -22,7 +20,6 @@ final class HomeViewController: UIViewController {
             homeTableView.separatorStyle = .none
         }
     }
-
     var presenter: HomePresenterInterface!
 
     // MARK: - Lifecycle -
@@ -38,6 +35,10 @@ final class HomeViewController: UIViewController {
         configureNavigationBar()
     }
 
+    @objc func logout() {
+        presenter.didPressLogout()
+    }
+
     private func configureNavigationBar() {
         navigationController?.setNavigationBarHidden(false, animated: false)
         self.title = "Shows"
@@ -47,17 +48,12 @@ final class HomeViewController: UIViewController {
                                                            target: self,
                                                            action: #selector(logout))
     }
-
-    @objc func logout() {
-        presenter.didPressLogout()
-    }
 	
 }
 
 // MARK: - Extensions -
 
 extension HomeViewController: HomeViewInterface {
-
 
     func reloadData() {
         homeTableView.reloadData()
@@ -66,6 +62,7 @@ extension HomeViewController: HomeViewInterface {
 }
 
 extension HomeViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.numberOfRowsInSection()
     }
@@ -84,7 +81,6 @@ extension HomeViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
 
 }
 

@@ -18,6 +18,7 @@ final class ShowDetailsInteractor {
 // MARK: - Extensions -
 
 extension ShowDetailsInteractor: ShowDetailsInteractorInterface {
+
     func fetchShowDetails(show: Show, completion: @escaping (Result<ShowDetails>) -> ()) {
         guard
             let token = NetworkManager.loginData?.token
@@ -55,7 +56,6 @@ extension ShowDetailsInteractor: ShowDetailsInteractorInterface {
             .validate()
             .responseDecodableObject(keyPath: "data", decoder: JSONDecoder()) { response in
                 completion(response.result)
-
         }
     }
 

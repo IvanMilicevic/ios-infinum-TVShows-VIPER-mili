@@ -47,7 +47,6 @@ extension LoginPresenter: LoginPresenterInterface {
                     self._view.showErrorOnProgressHUD()
             }
         }
-
     }
 
     func didSelectCreateAnAccountAction(with email: String?, password: String?) {
@@ -61,6 +60,7 @@ extension LoginPresenter: LoginPresenterInterface {
             case .success(let user):
                 self._view.showSuccessOnProgressHUD()
                 self.didSelectLoginAction(with: email, password: password)
+                print(user)
             case .failure:
                 self._view.showErrorOnProgressHUD()
             }
@@ -69,6 +69,6 @@ extension LoginPresenter: LoginPresenterInterface {
     }
 
     func didPressRememberMe() {
-
+        //TODO
     }
 }

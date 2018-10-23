@@ -20,12 +20,11 @@ class ShowDetailsImageCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-
-//        showDetailsImageView.image = nesto
+        //TODO
     }
 
     // MARK: - Functions
     func configure(with item: ShowDetails) {
-
+        //TODO
     }
 }

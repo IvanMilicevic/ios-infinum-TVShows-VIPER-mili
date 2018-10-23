@@ -41,7 +41,6 @@ extension ShowDetailsWireframe: ShowDetailsWireframeInterface {
         case .addNewEpisode:
             _goToAddNewEpisode()
         }
-        
     }
 
     private func _goToHome() {

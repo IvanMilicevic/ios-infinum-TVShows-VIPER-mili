@@ -20,7 +20,6 @@ final class HomeInteractor {
 extension HomeInteractor: HomeInteractorInterface {
 
     func fetchShows(completion: @escaping (Result<[Show]>) -> ()) {
-
         guard
             let token = NetworkManager.loginData?.token
             else {
@@ -39,7 +38,6 @@ extension HomeInteractor: HomeInteractorInterface {
                     completion(response.result)
 
         }
-
     }
 
 }

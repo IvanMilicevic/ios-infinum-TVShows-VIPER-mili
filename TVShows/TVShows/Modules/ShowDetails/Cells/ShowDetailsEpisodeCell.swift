@@ -21,7 +21,6 @@ class ShowDetailsEpisodeCell: UITableViewCell {
         seasonEpisodeLabel.text = nil
     }
 
-
     // MARK: - Functions
     func configure(with item: ShowEpisode) {
         var episodeNum = "?"
@@ -35,10 +34,8 @@ class ShowDetailsEpisodeCell: UITableViewCell {
             episodeNum = String(episode)
         }
 
-
         seasonEpisodeLabel.text = "S\(seasonNum) Ep\(episodeNum)"
         episodeTitleLabel.text = item.title
     }
-
     
 }

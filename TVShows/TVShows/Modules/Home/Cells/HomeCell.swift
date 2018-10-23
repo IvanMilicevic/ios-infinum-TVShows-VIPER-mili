@@ -13,7 +13,6 @@ import Alamofire
 class HomeCell: UITableViewCell {
 
     // MARK: - IBOutlets
-
     @IBOutlet weak var cellLabel: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
     

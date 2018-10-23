@@ -48,9 +48,9 @@ extension HomeWireframe: HomeWireframeInterface {
     }
 
     private func _goToShowDetails(show: Show) {
-
         let wireframe = ShowDetailsWireframe(show: show)
 
         navigationController?.pushWireframe(wireframe)
     }
+    
 }

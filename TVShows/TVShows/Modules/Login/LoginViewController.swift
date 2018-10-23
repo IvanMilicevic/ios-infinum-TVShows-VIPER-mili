@@ -24,7 +24,6 @@ final class LoginViewController: UIViewController {
     @IBOutlet private weak var loginButton: UIButton!
     @IBOutlet private weak var createAnAccountButton: UIButton!
 
-
     @IBOutlet private weak var scrollView: UIScrollView!
     // MARK: - Lifecycle -
 
@@ -42,8 +41,6 @@ final class LoginViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
 
-    // MARK: Actions
-
     @IBAction func _loginButtonActionHandler(_ sender: Any) {
         presenter.didSelectLoginAction(with: emailTextField.text, password: passwordTextField.text)
     }
@@ -52,7 +49,6 @@ final class LoginViewController: UIViewController {
         presenter.didSelectCreateAnAccountAction(with: emailTextField.text, password: passwordTextField.text)
     }
     @IBAction func _rememberMeButtonActionHandler(_ sender: Any) {
-
         // ovdje da promjenim ikonicu??
     }
 
@@ -85,7 +81,6 @@ final class LoginViewController: UIViewController {
         scrollView.contentInset = contentInset
     }
     
-
 }
 
 // MARK: - Extensions -

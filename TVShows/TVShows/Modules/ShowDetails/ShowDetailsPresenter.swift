@@ -65,7 +65,6 @@ extension ShowDetailsPresenter: ShowDetailsPresenterInterface {
         _wireframe.navigate(to: .addNewEpisode)
     }
 
-
     func viewDidLoad() {
         _interactor.fetchShowDetails(show: _show) { result in
             switch result {
@@ -84,13 +83,10 @@ extension ShowDetailsPresenter: ShowDetailsPresenterInterface {
                 print (error)
             }
         }
-
     }
 
     func didPressBackButton() {
         _wireframe.navigate(to: .home)
     }
-
-
 
 }

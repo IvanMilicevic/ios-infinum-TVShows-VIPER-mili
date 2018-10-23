@@ -32,8 +32,6 @@ final class HomePresenter {
 
 extension HomePresenter: HomePresenterInterface {
 
-
-
     func viewDidLoad() {
         _view.showProgressHUD()
         _interactor.fetchShows() { result in
