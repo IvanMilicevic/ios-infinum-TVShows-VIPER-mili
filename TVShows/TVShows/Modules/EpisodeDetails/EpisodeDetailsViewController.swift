@@ -16,11 +16,27 @@ final class EpisodeDetailsViewController: UIViewController {
 
     var presenter: EpisodeDetailsPresenterInterface!
 
+    // MARK: - Private properties -
+
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var episodeTitleLabel: UILabel!
+    @IBOutlet private weak var episodeSeasonAndEpisodeLabel: UILabel!
+    @IBOutlet private weak var episodeDescriptionLabel: UILabel!
+
     // MARK: - Lifecycle -
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    @IBAction func didPressBackButton(_ sender: Any) {
+
+    }
+
+    @IBAction func didPressCommentsButton(_ sender: Any) {
+
+    }
+
 	
 }
 

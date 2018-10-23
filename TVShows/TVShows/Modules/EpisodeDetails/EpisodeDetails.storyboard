@@ -89,6 +89,9 @@
                                     <constraint firstAttribute="width" constant="32" id="cqR-6S-b2j"/>
                                 </constraints>
                                 <state key="normal" image="ic-navigate-back"/>
+                                <connections>
+                                    <action selector="didPressBackButton:" destination="zIc-eW-6fX" eventType="touchUpInside" id="FWB-ql-Eri"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5AZ-jL-IDV" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="45" y="625" width="75" height="30"/>
@@ -103,6 +106,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didPressCommentsButton:" destination="zIc-eW-6fX" eventType="touchUpInside" id="f9T-3X-GyX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -120,6 +126,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="keX-Mo-uFt"/>
                     </view>
+                    <connections>
+                        <outlet property="episodeDescriptionLabel" destination="BRt-XG-swg" id="2a3-d4-Fvc"/>
+                        <outlet property="episodeSeasonAndEpisodeLabel" destination="wAf-cs-bot" id="Yas-9Z-yHe"/>
+                        <outlet property="episodeTitleLabel" destination="hkh-s7-92R" id="ibJ-WA-jT6"/>
+                        <outlet property="imageView" destination="zOY-4W-KJ1" id="DYv-Mb-iX3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rle-ol-2Ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
