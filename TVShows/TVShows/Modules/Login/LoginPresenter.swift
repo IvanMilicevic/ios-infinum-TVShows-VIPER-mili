@@ -18,6 +18,8 @@ final class LoginPresenter {
     private var _interactor: LoginInteractorInterface
     private var _wireframe: LoginWireframeInterface
 
+    private var rememberState: Bool = false
+
     // MARK: - Lifecycle -
 
     init(wireframe: LoginWireframeInterface, view: LoginViewInterface, interactor: LoginInteractorInterface) {
@@ -69,6 +71,7 @@ extension LoginPresenter: LoginPresenterInterface {
     }
 
     func didPressRememberMe() {
-        //TODO
+        rememberState = !rememberState
+        _view.setRememberState(state: rememberState)
     }
 }

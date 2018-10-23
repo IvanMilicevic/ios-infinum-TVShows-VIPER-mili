@@ -49,7 +49,7 @@ final class LoginViewController: UIViewController {
         presenter.didSelectCreateAnAccountAction(with: emailTextField.text, password: passwordTextField.text)
     }
     @IBAction func _rememberMeButtonActionHandler(_ sender: Any) {
-        // ovdje da promjenim ikonicu??
+        presenter.didPressRememberMe()
     }
 
     private func _registerForKeyboardNotifications() {
@@ -86,4 +86,14 @@ final class LoginViewController: UIViewController {
 // MARK: - Extensions -
 
 extension LoginViewController: LoginViewInterface {
+    func setRememberState(state: Bool) {
+        switch state {
+        case true:
+            rememberMeButton.setImage(UIImage(named: "ic-checkbox-filled"), for: .normal)
+        case false:
+            rememberMeButton.setImage(UIImage(named: "ic-checkbox-empty"), for: .normal)
+        }
+
+    }
+    
 }

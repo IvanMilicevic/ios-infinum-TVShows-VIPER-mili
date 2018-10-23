@@ -20,6 +20,7 @@ protocol LoginWireframeInterface: WireframeInterface {
 }
 
 protocol LoginViewInterface: ViewInterface {
+    func setRememberState(state: Bool)
 }
 
 protocol LoginPresenterInterface: PresenterInterface {
