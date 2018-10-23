@@ -34,6 +34,9 @@
                                                 <state key="normal" title="Upload photo">
                                                     <color key="titleColor" red="1" green="0.45882352939999999" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didPressUploadPhoto:" destination="zIc-eW-6fX" eventType="touchUpInside" id="gNA-gP-8WJ"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="wWS-0k-Txj">
                                                 <rect key="frame" x="20" y="363" width="335" height="158"/>
@@ -98,6 +101,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3pi-N7-nbV"/>
                     </view>
+                    <connections>
+                        <outlet property="episodeDescriptionTextField" destination="loT-Mx-TJD" id="jvG-qk-OR2"/>
+                        <outlet property="episodeNumberTextField" destination="Yfj-B1-8VL" id="Fyo-r2-3yT"/>
+                        <outlet property="episodeTitleTextField" destination="LE8-Fi-tda" id="uuN-H5-JrT"/>
+                        <outlet property="imageView" destination="6v4-IO-FTC" id="Eex-mo-iOX"/>
+                        <outlet property="scrollView" destination="pNT-Fa-Ba3" id="1RK-EQ-USv"/>
+                        <outlet property="seasonNumberTextField" destination="0w3-uU-TuI" id="H9i-2d-LG3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rle-ol-2Ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

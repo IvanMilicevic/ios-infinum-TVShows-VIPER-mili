@@ -16,6 +16,13 @@ final class AddNewEpisodeViewController: UIViewController {
 
     var presenter: AddNewEpisodePresenterInterface!
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var episodeTitleTextField: UITextField!
+    @IBOutlet weak var seasonNumberTextField: UITextField!
+    @IBOutlet weak var episodeNumberTextField: UITextField!
+    @IBOutlet weak var episodeDescriptionTextField: UITextField!
+
+    @IBOutlet weak var scrollView: UIScrollView!
     // MARK: - Lifecycle -
 
     override func viewDidLoad() {
@@ -40,6 +47,10 @@ final class AddNewEpisodeViewController: UIViewController {
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(didSelectAdd))
+    }
+
+    @IBAction func didPressUploadPhoto(_ sender: Any) {
+
     }
 
     // MARK: - @objc functions
