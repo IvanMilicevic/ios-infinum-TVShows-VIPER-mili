@@ -154,6 +154,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9j9-d5-ajK" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="287" y="583" width="68" height="74"/>
                                 <state key="normal" image="ic-fab-button"/>
+                                <connections>
+                                    <action selector="didPressAddNewEpisodeButton:" destination="zIc-eW-6fX" eventType="touchUpInside" id="4Mp-LL-7fb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrW-or-BI6" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="20" y="40" width="32" height="32"/>

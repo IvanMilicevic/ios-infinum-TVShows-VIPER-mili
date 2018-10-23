@@ -27,6 +27,7 @@ protocol ShowDetailsViewInterface: ViewInterface {
 
 protocol ShowDetailsPresenterInterface: PresenterInterface {
     func didPressBackButton()
+    func didPressAddNewEpisodeButton()
     func getShowDetails() -> ShowDetails?
     func getEpisodesCount() -> Int
     func numberOfRowsInSection() -> Int

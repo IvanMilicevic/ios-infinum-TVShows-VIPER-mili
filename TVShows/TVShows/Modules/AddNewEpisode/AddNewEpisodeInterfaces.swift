@@ -11,6 +11,7 @@
 import UIKit
 
 enum AddNewEpisodeNavigationOption {
+    case showDetails
 }
 
 protocol AddNewEpisodeWireframeInterface: WireframeInterface {

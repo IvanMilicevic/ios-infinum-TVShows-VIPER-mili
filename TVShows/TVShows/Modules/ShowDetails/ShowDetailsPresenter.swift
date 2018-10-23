@@ -41,7 +41,6 @@ extension ShowDetailsPresenter: ShowDetailsPresenterInterface {
         return _episodesArray.count
     }
 
-
     func getShowDetails() -> ShowDetails? {
         return _showDetails
     }
@@ -60,6 +59,10 @@ extension ShowDetailsPresenter: ShowDetailsPresenterInterface {
 
     func didSelectEpisode(at index: Int) {
         //TODO
+    }
+
+    func didPressAddNewEpisodeButton() {
+        _wireframe.navigate(to: .addNewEpisode)
     }
 
 

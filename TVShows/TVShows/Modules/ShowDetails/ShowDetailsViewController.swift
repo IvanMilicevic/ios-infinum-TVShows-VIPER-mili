@@ -41,6 +41,12 @@ final class ShowDetailsViewController: UIViewController {
     @IBAction func didPressBackButton(_ sender: Any) {
         presenter.didPressBackButton()
     }
+
+    @IBAction func didPressAddNewEpisodeButton(_ sender: Any) {
+        presenter.didPressAddNewEpisodeButton()
+    }
+
+
 }
 
 // MARK: - Extensions -
