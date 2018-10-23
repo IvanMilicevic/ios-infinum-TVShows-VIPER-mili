@@ -9,6 +9,8 @@
 //
 
 import UIKit
+import Alamofire
+import CodableAlamofire
 
 enum AddNewEpisodeNavigationOption {
     case showDetails
@@ -27,4 +29,5 @@ protocol AddNewEpisodePresenterInterface: PresenterInterface {
 }
 
 protocol AddNewEpisodeInteractorInterface: InteractorInterface {
+    func uploadEpisode(showID: String, episodeTitle: String, seasonNumber: String, episodeNumber: String, episodeDescription: String, episodeMediaID: String, completion: @escaping (Result<ShowDetails>) -> ())
 }
