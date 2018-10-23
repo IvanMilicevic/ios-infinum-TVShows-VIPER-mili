@@ -30,4 +30,13 @@ final class AddNewEpisodePresenter {
 // MARK: - Extensions -
 
 extension AddNewEpisodePresenter: AddNewEpisodePresenterInterface {
+
+    func didPressBackButton() {
+        _wireframe.navigate(to: .showDetails)
+    }
+
+    func didPressAddButton() {
+        
+    }
+
 }

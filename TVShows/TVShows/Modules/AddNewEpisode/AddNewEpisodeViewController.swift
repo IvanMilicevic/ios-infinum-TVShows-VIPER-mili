@@ -20,6 +20,7 @@ final class AddNewEpisodeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigationBar()
     }
 
 
@@ -27,7 +28,29 @@ final class AddNewEpisodeViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-	
+
+    private func configureNavigationBar() {
+        self.title = "Add Episode"
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel",
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(didSelectCancel))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add",
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(didSelectAdd))
+    }
+
+    // MARK: - @objc functions
+    @objc func didSelectCancel() {
+        presenter.didPressBackButton()
+    }
+
+    @objc func didSelectAdd() {
+        presenter.didPressAddButton()
+    }
+
 }
 
 // MARK: - Extensions -

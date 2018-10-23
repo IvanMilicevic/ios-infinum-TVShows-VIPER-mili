@@ -22,6 +22,8 @@ protocol AddNewEpisodeViewInterface: ViewInterface {
 }
 
 protocol AddNewEpisodePresenterInterface: PresenterInterface {
+    func didPressBackButton()
+    func didPressAddButton()
 }
 
 protocol AddNewEpisodeInteractorInterface: InteractorInterface {

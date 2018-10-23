@@ -22,6 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: loginWireframe.viewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
+
+        UINavigationBar.appearance().barTintColor = .white
+        UINavigationBar.appearance().tintColor = UIColor(red: CGFloat(255.0/255),
+                                                         green: CGFloat(117.0/255),
+                                                         blue: CGFloat(140.0/255),
+                                                         alpha: CGFloat(1))
+        UINavigationBar.appearance().shadowImage = UIImage()
+        
         return true
     }
 
