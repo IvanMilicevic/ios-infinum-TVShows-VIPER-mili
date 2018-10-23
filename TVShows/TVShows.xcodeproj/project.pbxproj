@@ -26,6 +26,18 @@
 		8C4468D9217E650000CA9DD3 /* AddNewEpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468D3217E650000CA9DD3 /* AddNewEpisodeViewController.swift */; };
 		8C4468DA217E650000CA9DD3 /* AddNewEpisodeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468D4217E650000CA9DD3 /* AddNewEpisodeInteractor.swift */; };
 		8C4468DB217E650000CA9DD3 /* AddNewEpisodeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468D5217E650000CA9DD3 /* AddNewEpisodeWireframe.swift */; };
+		8C4468F1217F115900CA9DD3 /* EpisodeDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4468EB217F115900CA9DD3 /* EpisodeDetails.storyboard */; };
+		8C4468F2217F115900CA9DD3 /* EpisodeDetailsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468EC217F115900CA9DD3 /* EpisodeDetailsInterfaces.swift */; };
+		8C4468F3217F115900CA9DD3 /* EpisodeDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468ED217F115900CA9DD3 /* EpisodeDetailsPresenter.swift */; };
+		8C4468F4217F115900CA9DD3 /* EpisodeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468EE217F115900CA9DD3 /* EpisodeDetailsViewController.swift */; };
+		8C4468F5217F115900CA9DD3 /* EpisodeDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468EF217F115900CA9DD3 /* EpisodeDetailsInteractor.swift */; };
+		8C4468F6217F115900CA9DD3 /* EpisodeDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468F0217F115900CA9DD3 /* EpisodeDetailsWireframe.swift */; };
+		8C4468FD217F117900CA9DD3 /* Comments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4468F7217F117900CA9DD3 /* Comments.storyboard */; };
+		8C4468FE217F117900CA9DD3 /* CommentsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468F8217F117900CA9DD3 /* CommentsInterfaces.swift */; };
+		8C4468FF217F117900CA9DD3 /* CommentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468F9217F117900CA9DD3 /* CommentsPresenter.swift */; };
+		8C446900217F117900CA9DD3 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468FA217F117900CA9DD3 /* CommentsViewController.swift */; };
+		8C446901217F117900CA9DD3 /* CommentsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468FB217F117900CA9DD3 /* CommentsInteractor.swift */; };
+		8C446902217F117900CA9DD3 /* CommentsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468FC217F117900CA9DD3 /* CommentsWireframe.swift */; };
 		8C52B2CA217749C90048C730 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B2C9217749C90048C730 /* Constants.swift */; };
 		8C52B2CC217749FF0048C730 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B2CB217749FF0048C730 /* Initializable.swift */; };
 		8C52B2EB217750410048C730 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B2E6217750410048C730 /* InteractorInterface.swift */; };
@@ -76,6 +88,18 @@
 		8C4468D3217E650000CA9DD3 /* AddNewEpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEpisodeViewController.swift; sourceTree = "<group>"; };
 		8C4468D4217E650000CA9DD3 /* AddNewEpisodeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEpisodeInteractor.swift; sourceTree = "<group>"; };
 		8C4468D5217E650000CA9DD3 /* AddNewEpisodeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEpisodeWireframe.swift; sourceTree = "<group>"; };
+		8C4468EB217F115900CA9DD3 /* EpisodeDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EpisodeDetails.storyboard; sourceTree = "<group>"; };
+		8C4468EC217F115900CA9DD3 /* EpisodeDetailsInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsInterfaces.swift; sourceTree = "<group>"; };
+		8C4468ED217F115900CA9DD3 /* EpisodeDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsPresenter.swift; sourceTree = "<group>"; };
+		8C4468EE217F115900CA9DD3 /* EpisodeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsViewController.swift; sourceTree = "<group>"; };
+		8C4468EF217F115900CA9DD3 /* EpisodeDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsInteractor.swift; sourceTree = "<group>"; };
+		8C4468F0217F115900CA9DD3 /* EpisodeDetailsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsWireframe.swift; sourceTree = "<group>"; };
+		8C4468F7217F117900CA9DD3 /* Comments.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Comments.storyboard; sourceTree = "<group>"; };
+		8C4468F8217F117900CA9DD3 /* CommentsInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsInterfaces.swift; sourceTree = "<group>"; };
+		8C4468F9217F117900CA9DD3 /* CommentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsPresenter.swift; sourceTree = "<group>"; };
+		8C4468FA217F117900CA9DD3 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		8C4468FB217F117900CA9DD3 /* CommentsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsInteractor.swift; sourceTree = "<group>"; };
+		8C4468FC217F117900CA9DD3 /* CommentsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsWireframe.swift; sourceTree = "<group>"; };
 		8C52B2C9217749C90048C730 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8C52B2CB217749FF0048C730 /* Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializable.swift; sourceTree = "<group>"; };
 		8C52B2E6217750410048C730 /* InteractorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
@@ -194,6 +218,32 @@
 			path = AddNewEpisode;
 			sourceTree = "<group>";
 		};
+		8C4468E9217F10C900CA9DD3 /* EpisodeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8C4468EB217F115900CA9DD3 /* EpisodeDetails.storyboard */,
+				8C4468EC217F115900CA9DD3 /* EpisodeDetailsInterfaces.swift */,
+				8C4468ED217F115900CA9DD3 /* EpisodeDetailsPresenter.swift */,
+				8C4468EE217F115900CA9DD3 /* EpisodeDetailsViewController.swift */,
+				8C4468EF217F115900CA9DD3 /* EpisodeDetailsInteractor.swift */,
+				8C4468F0217F115900CA9DD3 /* EpisodeDetailsWireframe.swift */,
+			);
+			path = EpisodeDetails;
+			sourceTree = "<group>";
+		};
+		8C4468EA217F111C00CA9DD3 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				8C4468F7217F117900CA9DD3 /* Comments.storyboard */,
+				8C4468F8217F117900CA9DD3 /* CommentsInterfaces.swift */,
+				8C4468F9217F117900CA9DD3 /* CommentsPresenter.swift */,
+				8C4468FA217F117900CA9DD3 /* CommentsViewController.swift */,
+				8C4468FB217F117900CA9DD3 /* CommentsInteractor.swift */,
+				8C4468FC217F117900CA9DD3 /* CommentsWireframe.swift */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
 		8C52B2C3217748140048C730 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +281,8 @@
 				8C52B2F1217875070048C730 /* Home */,
 				8C4468B9217DE96F00CA9DD3 /* ShowDetails */,
 				8C4468CF217E64CB00CA9DD3 /* AddNewEpisode */,
+				8C4468E9217F10C900CA9DD3 /* EpisodeDetails */,
+				8C4468EA217F111C00CA9DD3 /* Comments */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -401,12 +453,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C4468FD217F117900CA9DD3 /* Comments.storyboard in Resources */,
 				8C24E8CD21774250005D3FB5 /* LaunchScreen.storyboard in Resources */,
 				8C4468D6217E650000CA9DD3 /* AddNewEpisode.storyboard in Resources */,
 				8C24E8CA21774250005D3FB5 /* Assets.xcassets in Resources */,
 				8C52B2F82178759F0048C730 /* Login.storyboard in Resources */,
 				8C4468C0217DE9A900CA9DD3 /* ShowDetails.storyboard in Resources */,
 				8C52B30E2178B9DB0048C730 /* Home.storyboard in Resources */,
+				8C4468F1217F115900CA9DD3 /* EpisodeDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +532,7 @@
 				8C52B2EF217750410048C730 /* ViewInterface.swift in Sources */,
 				8C4468D8217E650000CA9DD3 /* AddNewEpisodePresenter.swift in Sources */,
 				8C52B2EB217750410048C730 /* InteractorInterface.swift in Sources */,
+				8C4468F2217F115900CA9DD3 /* EpisodeDetailsInterfaces.swift in Sources */,
 				8C4468DA217E650000CA9DD3 /* AddNewEpisodeInteractor.swift in Sources */,
 				8C52B31F2179DB3F0048C730 /* ShowDetails.swift in Sources */,
 				8C4468D9217E650000CA9DD3 /* AddNewEpisodeViewController.swift in Sources */,
@@ -487,15 +542,19 @@
 				8C4468CC217DFF1500CA9DD3 /* ShowDetailsEpisodeCell.swift in Sources */,
 				8C52B3212179DB6E0048C730 /* Show.swift in Sources */,
 				8C4468C3217DE9A900CA9DD3 /* ShowDetailsViewController.swift in Sources */,
+				8C446900217F117900CA9DD3 /* CommentsViewController.swift in Sources */,
 				8C4468CA217DFEBF00CA9DD3 /* ShowDetailsDescriptionCell.swift in Sources */,
+				8C446901217F117900CA9DD3 /* CommentsInteractor.swift in Sources */,
 				8C4468C5217DE9A900CA9DD3 /* ShowDetailsWireframe.swift in Sources */,
 				8C52B2CA217749C90048C730 /* Constants.swift in Sources */,
 				8C4468C1217DE9A900CA9DD3 /* ShowDetailsInterfaces.swift in Sources */,
+				8C4468F4217F115900CA9DD3 /* EpisodeDetailsViewController.swift in Sources */,
 				8C52B3132178B9DB0048C730 /* HomeWireframe.swift in Sources */,
 				8C52B2FA2178759F0048C730 /* LoginPresenter.swift in Sources */,
 				8C4468C4217DE9A900CA9DD3 /* ShowDetailsInteractor.swift in Sources */,
 				8C52B2EE217750410048C730 /* PresenterInterface.swift in Sources */,
 				8C52B3182179C9780048C730 /* User.swift in Sources */,
+				8C4468FF217F117900CA9DD3 /* CommentsPresenter.swift in Sources */,
 				8C52B30F2178B9DB0048C730 /* HomeInterfaces.swift in Sources */,
 				8C4468DB217E650000CA9DD3 /* AddNewEpisodeWireframe.swift in Sources */,
 				8C4468C2217DE9A900CA9DD3 /* ShowDetailsPresenter.swift in Sources */,
@@ -503,13 +562,18 @@
 				8C52B2CC217749FF0048C730 /* Initializable.swift in Sources */,
 				8C52B2FC2178759F0048C730 /* LoginInteractor.swift in Sources */,
 				8C52B31D2179DAAF0048C730 /* HomeCell.swift in Sources */,
+				8C4468F5217F115900CA9DD3 /* EpisodeDetailsInteractor.swift in Sources */,
 				8C52B3112178B9DB0048C730 /* HomeViewController.swift in Sources */,
+				8C4468F3217F115900CA9DD3 /* EpisodeDetailsPresenter.swift in Sources */,
 				8C4468D7217E650000CA9DD3 /* AddNewEpisodeInterfaces.swift in Sources */,
+				8C4468F6217F115900CA9DD3 /* EpisodeDetailsWireframe.swift in Sources */,
 				8C52B2ED217750410048C730 /* UIStoryboardExtension.swift in Sources */,
 				8C52B2EC217750410048C730 /* BaseWireframe.swift in Sources */,
 				8C52B3162179BC980048C730 /* LoginData.swift in Sources */,
+				8C446902217F117900CA9DD3 /* CommentsWireframe.swift in Sources */,
 				8C52B2FB2178759F0048C730 /* LoginViewController.swift in Sources */,
 				8C4468CE217E0B1E00CA9DD3 /* ShowEpisode.swift in Sources */,
+				8C4468FE217F117900CA9DD3 /* CommentsInterfaces.swift in Sources */,
 				8C52B2FD2178759F0048C730 /* LoginWireframe.swift in Sources */,
 				8C52B3122178B9DB0048C730 /* HomeInteractor.swift in Sources */,
 			);
