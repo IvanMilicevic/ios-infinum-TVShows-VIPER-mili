@@ -35,7 +35,7 @@ final class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
-
+        configureNavigationBar()
     }
 
     private func configureNavigationBar() {
@@ -61,7 +61,6 @@ extension HomeViewController: HomeViewInterface {
 
     func reloadData() {
         homeTableView.reloadData()
-        configureNavigationBar()
     }
 
 }

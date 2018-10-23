@@ -34,5 +34,15 @@ final class AddNewEpisodeWireframe: BaseWireframe {
 extension AddNewEpisodeWireframe: AddNewEpisodeWireframeInterface {
 
     func navigate(to option: AddNewEpisodeNavigationOption) {
+
+        switch option {
+        case .showDetails:
+            _returnToShowDetails()
+        }
+
+    }
+
+    private func _returnToShowDetails() {
+        navigationController?.popViewController(animated: true)
     }
 }
