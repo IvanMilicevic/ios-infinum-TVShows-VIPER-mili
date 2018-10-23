@@ -227,10 +227,10 @@
 		8C52B2C6217748DD0048C730 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				8C4468CF217E64CB00CA9DD3 /* AddNewEpisode */,
 				8C52B2F02178748C0048C730 /* Login */,
 				8C52B2F1217875070048C730 /* Home */,
 				8C4468B9217DE96F00CA9DD3 /* ShowDetails */,
+				8C4468CF217E64CB00CA9DD3 /* AddNewEpisode */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
