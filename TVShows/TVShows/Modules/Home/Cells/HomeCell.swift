@@ -29,6 +29,25 @@ class HomeCell: UITableViewCell {
     // MARK: - Functions
     func configure(with item: Show){
         cellLabel.text = item.title
+
+        guard
+            let token = NetworkManager.loginData?.token,
+            let imageUrl = item.imageUrl
+            else {
+                cellImage.image = placeholderImg
+                return
+        }
+
+        let url = URL(string: "https://api.infinum.academy\(imageUrl)")
+        let modifier = AnyModifier { request in
+            var r = request
+            r.setValue(token, forHTTPHeaderField: "Authorization")
+            return r
+        }
+
+        cellImage.kf.setImage(with: url,
+                                   placeholder: self.placeholderImg,
+                                   options: [.requestModifier(modifier)])
     }
 
 }

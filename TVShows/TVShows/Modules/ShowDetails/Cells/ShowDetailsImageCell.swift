@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ShowDetailsImageCell: UITableViewCell {
 
     @IBOutlet weak var showDetailsImageView: UIImageView!
+
+    // MARK: - Private
+    private let placeholderImg: UIImage = UIImage(named: "missing")!
 
     // MARK: - View Lifecycle
     override func awakeFromNib() {
@@ -24,7 +28,24 @@ class ShowDetailsImageCell: UITableViewCell {
     }
 
     // MARK: - Functions
-    func configure(with item: ShowDetails) {
-        //TODO
+    func configure(with item: ShowDetails?) {
+        guard
+            let token = NetworkManager.loginData?.token,
+            let item = item
+            else {
+                showDetailsImageView.image = placeholderImg
+                return
+        }
+        
+        let url = URL(string: "https://api.infinum.academy\(item.imageUrl)")
+        let modifier = AnyModifier { request in
+            var r = request
+            r.setValue(token, forHTTPHeaderField: "Authorization")
+            return r
+        }
+
+        showDetailsImageView.kf.setImage(with: url,
+                              placeholder: self.placeholderImg,
+                              options: [.requestModifier(modifier)])
     }
 }

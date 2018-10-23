@@ -75,6 +75,7 @@ extension ShowDetailsViewController: UITableViewDataSource {
                 for: indexPath
                 ) as! ShowDetailsImageCell
             cell.selectionStyle = .none
+            cell.configure(with: presenter.getShowDetails())
             return cell
         case 1:
             let cell = showDetailsTableView.dequeueReusableCell(

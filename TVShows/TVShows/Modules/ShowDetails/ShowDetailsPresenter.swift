@@ -22,7 +22,7 @@ final class ShowDetailsPresenter {
     private var _showDetails: ShowDetails?
     private var _episodesArray: [ShowEpisode] = []
 
-    // MARK: - Lifecycle -
+    // MARK: - Lifecycle
 
     init(wireframe: ShowDetailsWireframeInterface, view: ShowDetailsViewInterface, interactor: ShowDetailsInteractorInterface, show: Show) {
         _wireframe = wireframe
