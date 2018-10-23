@@ -102,4 +102,9 @@ extension ShowDetailsViewController: UITableViewDataSource {
 
 extension ShowDetailsViewController: UITableViewDelegate {
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelectEpisode(at: indexPath.row)
+        showDetailsTableView.deselectRow(at: indexPath, animated: true)
+    }
+
 }

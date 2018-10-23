@@ -18,12 +18,15 @@ final class EpisodeDetailsPresenter {
     private var _interactor: EpisodeDetailsInteractorInterface
     private var _wireframe: EpisodeDetailsWireframeInterface
 
+    private var _episode: ShowEpisode
     // MARK: - Lifecycle -
 
-    init(wireframe: EpisodeDetailsWireframeInterface, view: EpisodeDetailsViewInterface, interactor: EpisodeDetailsInteractorInterface) {
+    init(wireframe: EpisodeDetailsWireframeInterface, view: EpisodeDetailsViewInterface, interactor: EpisodeDetailsInteractorInterface, episode: ShowEpisode) {
         _wireframe = wireframe
         _view = view
         _interactor = interactor
+        _episode = episode
+        print(episode)
     }
 }
 

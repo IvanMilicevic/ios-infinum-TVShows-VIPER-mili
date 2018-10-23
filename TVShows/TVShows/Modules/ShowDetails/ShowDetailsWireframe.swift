@@ -42,6 +42,8 @@ extension ShowDetailsWireframe: ShowDetailsWireframeInterface {
             _goToHome()
         case .addNewEpisode(let show):
             _goToAddNewEpisode(show: show)
+        case .episodeDetails(let episode):
+            _goToEpisodeDetails(episode: episode)
         }
     }
 
@@ -55,7 +57,14 @@ extension ShowDetailsWireframe: ShowDetailsWireframeInterface {
         }
 
         let wireframe = AddNewEpisodeWireframe(show: show, delegate : _delegate)
+        navigationController?.pushWireframe(wireframe)
+    }
+
+    private func _goToEpisodeDetails(episode: ShowEpisode) {
+        let wireframe = EpisodeDetailsWireframe(episode: episode)
 
         navigationController?.pushWireframe(wireframe)
     }
+
+
 }

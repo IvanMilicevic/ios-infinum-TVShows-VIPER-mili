@@ -62,7 +62,10 @@ extension ShowDetailsPresenter: ShowDetailsPresenterInterface {
     }
 
     func didSelectEpisode(at index: Int) {
-        //TODO
+        if index == 0 || index == 1 {
+            return
+        }
+        _wireframe.navigate(to: .episodeDetails(episode: _episodesArray[index-2]))
     }
 
     func didPressAddNewEpisodeButton() {
