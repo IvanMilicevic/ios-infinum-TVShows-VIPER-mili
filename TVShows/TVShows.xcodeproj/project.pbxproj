@@ -38,6 +38,8 @@
 		8C446900217F117900CA9DD3 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468FA217F117900CA9DD3 /* CommentsViewController.swift */; };
 		8C446901217F117900CA9DD3 /* CommentsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468FB217F117900CA9DD3 /* CommentsInteractor.swift */; };
 		8C446902217F117900CA9DD3 /* CommentsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4468FC217F117900CA9DD3 /* CommentsWireframe.swift */; };
+		8C4469112180532100CA9DD3 /* EpisodeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4469102180532100CA9DD3 /* EpisodeDetails.swift */; };
+		8C4469132180534B00CA9DD3 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4469122180534B00CA9DD3 /* Comment.swift */; };
 		8C52B2CA217749C90048C730 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B2C9217749C90048C730 /* Constants.swift */; };
 		8C52B2CC217749FF0048C730 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B2CB217749FF0048C730 /* Initializable.swift */; };
 		8C52B2EB217750410048C730 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52B2E6217750410048C730 /* InteractorInterface.swift */; };
@@ -100,6 +102,8 @@
 		8C4468FA217F117900CA9DD3 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		8C4468FB217F117900CA9DD3 /* CommentsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsInteractor.swift; sourceTree = "<group>"; };
 		8C4468FC217F117900CA9DD3 /* CommentsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsWireframe.swift; sourceTree = "<group>"; };
+		8C4469102180532100CA9DD3 /* EpisodeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetails.swift; sourceTree = "<group>"; };
+		8C4469122180534B00CA9DD3 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		8C52B2C9217749C90048C730 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8C52B2CB217749FF0048C730 /* Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializable.swift; sourceTree = "<group>"; };
 		8C52B2E6217750410048C730 /* InteractorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
@@ -373,6 +377,8 @@
 				8C52B31E2179DB3F0048C730 /* ShowDetails.swift */,
 				8C52B3202179DB6E0048C730 /* Show.swift */,
 				8C4468CD217E0B1E00CA9DD3 /* ShowEpisode.swift */,
+				8C4469102180532100CA9DD3 /* EpisodeDetails.swift */,
+				8C4469122180534B00CA9DD3 /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -532,6 +538,7 @@
 				8C52B2EF217750410048C730 /* ViewInterface.swift in Sources */,
 				8C4468D8217E650000CA9DD3 /* AddNewEpisodePresenter.swift in Sources */,
 				8C52B2EB217750410048C730 /* InteractorInterface.swift in Sources */,
+				8C4469112180532100CA9DD3 /* EpisodeDetails.swift in Sources */,
 				8C4468F2217F115900CA9DD3 /* EpisodeDetailsInterfaces.swift in Sources */,
 				8C4468DA217E650000CA9DD3 /* AddNewEpisodeInteractor.swift in Sources */,
 				8C52B31F2179DB3F0048C730 /* ShowDetails.swift in Sources */,
@@ -562,6 +569,7 @@
 				8C52B2CC217749FF0048C730 /* Initializable.swift in Sources */,
 				8C52B2FC2178759F0048C730 /* LoginInteractor.swift in Sources */,
 				8C52B31D2179DAAF0048C730 /* HomeCell.swift in Sources */,
+				8C4469132180534B00CA9DD3 /* Comment.swift in Sources */,
 				8C4468F5217F115900CA9DD3 /* EpisodeDetailsInteractor.swift in Sources */,
 				8C52B3112178B9DB0048C730 /* HomeViewController.swift in Sources */,
 				8C4468F3217F115900CA9DD3 /* EpisodeDetailsPresenter.swift in Sources */,

@@ -9,8 +9,11 @@
 //
 
 import UIKit
+import Alamofire
 
 enum EpisodeDetailsNavigationOption {
+    case showDetails
+    case comments
 }
 
 protocol EpisodeDetailsWireframeInterface: WireframeInterface {
@@ -24,4 +27,6 @@ protocol EpisodeDetailsPresenterInterface: PresenterInterface {
 }
 
 protocol EpisodeDetailsInteractorInterface: InteractorInterface {
+    func fetchEpisodeDetails(episode: ShowEpisode, completion: @escaping (Result<EpisodeDetails>) -> ())
+    
 }
