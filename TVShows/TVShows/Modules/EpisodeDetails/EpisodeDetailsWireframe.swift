@@ -34,5 +34,21 @@ final class EpisodeDetailsWireframe: BaseWireframe {
 extension EpisodeDetailsWireframe: EpisodeDetailsWireframeInterface {
 
     func navigate(to option: EpisodeDetailsNavigationOption) {
+
+        switch option {
+        case .showDetails:
+            _returnToShowDetails()
+        case .comments:
+            _goToComments()
+        }
+
+    }
+
+    private func _returnToShowDetails() {
+        navigationController?.popViewController(animated: true)
+    }
+
+    private func _goToComments() {
+        //TODO
     }
 }

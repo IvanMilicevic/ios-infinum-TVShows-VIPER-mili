@@ -9,6 +9,8 @@
 //
 
 import Foundation
+import Alamofire
+import CodableAlamofire
 
 final class EpisodeDetailsInteractor {
 }
@@ -16,4 +18,25 @@ final class EpisodeDetailsInteractor {
 // MARK: - Extensions -
 
 extension EpisodeDetailsInteractor: EpisodeDetailsInteractorInterface {
+
+    func fetchEpisodeDetails(episode: ShowEpisode, completion: @escaping (Result<EpisodeDetails>) -> ()) {
+        guard
+            let token = NetworkManager.loginData?.token
+            else {
+                return
+        }
+        let headers = ["Authorization": token]
+
+        Alamofire
+            .request("https://api.infinum.academy/api/episodes/\(episode.id)",
+                     method: .get,
+                     parameters: nil,
+                     encoding: JSONEncoding.default,
+                     headers: headers)
+            .validate()
+            .responseDecodableObject(keyPath: "data", decoder: JSONDecoder()) { response in
+                completion(response.result)
+        }
+    }
+
 }

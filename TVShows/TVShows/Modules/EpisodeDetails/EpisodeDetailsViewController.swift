@@ -27,14 +27,15 @@ final class EpisodeDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
     }
 
     @IBAction func didPressBackButton(_ sender: Any) {
-
+        presenter.didPressBackButton()
     }
 
     @IBAction func didPressCommentsButton(_ sender: Any) {
-
+        presenter.didPressCommentsButton()
     }
 
 	
@@ -43,4 +44,12 @@ final class EpisodeDetailsViewController: UIViewController {
 // MARK: - Extensions -
 
 extension EpisodeDetailsViewController: EpisodeDetailsViewInterface {
+
+    func reloadData(episodeDetails: EpisodeDetails) {
+        print(episodeDetails)
+        episodeTitleLabel.text = episodeDetails.title
+        episodeSeasonAndEpisodeLabel.text = "S\(episodeDetails.season) E\(episodeDetails.episodeNumber)"
+        episodeDescriptionLabel.text = episodeDetails.description
+    }
+
 }

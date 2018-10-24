@@ -21,12 +21,14 @@ protocol EpisodeDetailsWireframeInterface: WireframeInterface {
 }
 
 protocol EpisodeDetailsViewInterface: ViewInterface {
+    func reloadData(episodeDetails: EpisodeDetails)
 }
 
 protocol EpisodeDetailsPresenterInterface: PresenterInterface {
+    func didPressBackButton()
+    func didPressCommentsButton()
 }
 
 protocol EpisodeDetailsInteractorInterface: InteractorInterface {
     func fetchEpisodeDetails(episode: ShowEpisode, completion: @escaping (Result<EpisodeDetails>) -> ())
-    
 }

@@ -19,6 +19,7 @@ final class EpisodeDetailsPresenter {
     private var _wireframe: EpisodeDetailsWireframeInterface
 
     private var _episode: ShowEpisode
+    private var _episodeDetails: EpisodeDetails?
     // MARK: - Lifecycle -
 
     init(wireframe: EpisodeDetailsWireframeInterface, view: EpisodeDetailsViewInterface, interactor: EpisodeDetailsInteractorInterface, episode: ShowEpisode) {
@@ -26,11 +27,33 @@ final class EpisodeDetailsPresenter {
         _view = view
         _interactor = interactor
         _episode = episode
-        print(episode)
     }
 }
 
 // MARK: - Extensions -
 
 extension EpisodeDetailsPresenter: EpisodeDetailsPresenterInterface {
+
+    func viewDidLoad() {
+        _interactor.fetchEpisodeDetails(episode: _episode) { result in
+
+            switch result {
+            case .success(let episodeDetails):
+                self._episodeDetails = episodeDetails
+                self._view.reloadData(episodeDetails: episodeDetails)
+            case .failure(let error):
+                print(error)
+            }
+
+        }
+    }
+    
+    func didPressBackButton() {
+        _wireframe.navigate(to: .showDetails)
+    }
+
+    func didPressCommentsButton() {
+        _wireframe.navigate(to: .comments)
+    }
+
 }
